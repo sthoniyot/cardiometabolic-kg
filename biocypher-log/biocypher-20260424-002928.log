@@ -1,0 +1,102 @@
+2026-04-24 00:29:28,894	INFO	module:_logger
+This is BioCypher v0.8.0.
+2026-04-24 00:29:28,894	INFO	module:_logger
+Logging into `biocypher-log/biocypher-20260424-002928.log`.
+2026-04-24 00:29:28,894	DEBUG	module:_create
+Loading module biocypher._create.
+2026-04-24 00:29:28,895	DEBUG	module:_deduplicate
+Loading module biocypher._deduplicate.
+2026-04-24 00:29:28,984	DEBUG	module:_misc
+Loading module biocypher._misc.
+2026-04-24 00:29:28,984	DEBUG	module:_get
+Loading module biocypher._get.
+2026-04-24 00:29:28,985	DEBUG	module:_mapping
+Loading module biocypher._mapping.
+2026-04-24 00:29:29,007	DEBUG	module:_ontology
+Loading module biocypher._ontology.
+2026-04-24 00:29:29,009	DEBUG	module:_translate
+Loading module biocypher._translate.
+2026-04-24 00:29:29,296	DEBUG	module:_neo4j_driver
+Loading module biocypher.output.connect._neo4j_driver.
+2026-04-24 00:29:29,296	DEBUG	module:_get_connector
+Loading module biocypher.output.connect._get_connector.
+2026-04-24 00:29:29,297	DEBUG	module:_get_in_memory_kg
+Loading module biocypher.output.in_memory._get_in_memory_kg.
+2026-04-24 00:29:29,298	DEBUG	module:_get_writer
+Loading module biocypher.output.write._get_writer.
+2026-04-24 00:29:29,298	DEBUG	module:_core
+Loading module biocypher._core.
+2026-04-24 00:29:29,300	INFO	module:_core
+Running BioCypher with schema configuration from config/schema_config.yaml.
+2026-04-24 00:29:37,520	INFO	module:_ontology
+Loading ontologies...
+2026-04-24 00:29:37,520	INFO	module:_ontology
+Instantiating OntologyAdapter class for https://github.com/biolink/biolink-model/raw/v3.6.0/biolink-model.owl.ttl.
+2026-04-24 00:29:38,535	INFO	module:_writer
+Creating output directory `/home/sthoniyot/projects/cardiometabolic-kg/data/processed/biocypher-out`.
+2026-04-24 00:29:38,536	DEBUG	module:_batch_writer
+Writing node CSV from generator.
+2026-04-24 00:29:38,536	DEBUG	module:_translate
+Translating nodes to BioCypher
+2026-04-24 00:29:38,778	DEBUG	module:_translate
+Finished translating nodes to BioCypher.
+2026-04-24 00:29:38,859	INFO	module:_batch_writer
+Writing 47718 entries to Snp-part000.csv
+2026-04-24 00:29:38,872	INFO	module:_batch_writer
+Writing 6323 entries to Gene-part000.csv
+2026-04-24 00:29:38,872	INFO	module:_batch_writer
+Writing 11 entries to Phenotype-part000.csv
+2026-04-24 00:29:38,882	DEBUG	module:_translate
+Translating edges to BioCypher
+2026-04-24 00:29:39,085	DEBUG	module:_translate
+Finished translating edges to BioCypher.
+2026-04-24 00:29:39,102	DEBUG	module:_batch_writer
+Writing edge CSV from generator.
+2026-04-24 00:29:39,151	INFO	module:_batch_writer
+Writing 18209 entries to SnpToGene-part000.csv
+2026-04-24 00:29:39,308	INFO	module:_batch_writer
+Writing 54223 entries to SnpToPhenotype-part000.csv
+2026-04-24 00:29:39,327	INFO	module:_batch_writer
+Writing neo4j import call to `/home/sthoniyot/projects/cardiometabolic-kg/data/processed/biocypher-out/neo4j-admin-import-call.sh`.
+2026-04-24 00:29:39,327	INFO	module:_ontology
+Showing ontology structure based on https://github.com/biolink/biolink-model/raw/v3.6.0/biolink-model.owl.ttl
+2026-04-24 00:29:39,328	INFO	module:_ontology
+
+entity
+├── association
+│   ├── food to nutrient
+│   ├── gene to pathway
+│   ├── microbe to cazyme
+│   ├── microbe to nutrient
+│   ├── microbe to phenotype
+│   ├── nutrient to phenotype
+│   ├── phenotype to phenotype
+│   ├── snp to gene
+│   └── snp to phenotype
+└── named thing
+    ├── biological entity
+    │   ├── biological process or activity
+    │   │   └── biological process
+    │   │       └── pathway
+    │   ├── disease or phenotypic feature
+    │   │   └── phenotypic feature
+    │   │       └── phenotype
+    │   ├── gene
+    │   └── sequence variant
+    │       └── snp
+    ├── cazyme
+    ├── chemical entity
+    │   ├── chemical mixture
+    │   │   └── food
+    │   └── molecular entity
+    │       └── small molecule
+    │           └── nutrient
+    └── organism taxon
+        └── microbe
+
+2026-04-24 00:29:39,328	INFO	module:_core
+No duplicate nodes in input.
+2026-04-24 00:29:39,328	INFO	module:_core
+No duplicate edges in input.
+2026-04-24 00:29:39,328	INFO	module:_core
+No missing labels in input.
