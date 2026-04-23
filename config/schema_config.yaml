@@ -1,0 +1,155 @@
+# ============================================================
+# CARDIOMETABOLIC KG SCHEMA (v0.6 - BioCypher 0.8 compatible)
+# ============================================================
+
+# -------------------- NODE TYPES --------------------
+
+snp:
+  is_a: sequence variant
+  represented_as: node
+  preferred_id: dbsnp
+  input_label: snp
+  properties:
+    chromosome: str
+    position: int
+    risk_allele: str
+    effect_size: float
+    p_value: float
+
+gene:
+  represented_as: node
+  preferred_id: hgnc
+  input_label: gene
+  properties:
+    symbol: str
+    description: str
+
+pathway:
+  represented_as: node
+  preferred_id: reactome
+  input_label: pathway
+  properties:
+    name: str
+    source: str
+
+microbe:
+  is_a: organism taxon
+  represented_as: node
+  preferred_id: ncbitaxon
+  input_label: microbe
+  properties:
+    name: str
+    rank: str
+
+cazyme:
+  is_a: named thing
+  represented_as: node
+  preferred_id: uniprot
+  input_label: cazyme
+  properties:
+    family: str
+    function: str
+    cazy_family: str
+
+nutrient:
+  is_a: small molecule
+  represented_as: node
+  preferred_id: chebi
+  input_label: nutrient
+  properties:
+    name: str
+    compound_class: str
+
+food:
+  represented_as: node
+  preferred_id: foodon
+  input_label: food
+  properties:
+    name: str
+    food_group: str
+
+phenotype:
+  is_a: phenotypic feature
+  represented_as: node
+  preferred_id: mondo
+  input_label: phenotype
+  properties:
+    name: str
+    category: str
+
+# -------------------- EDGE TYPES --------------------
+
+snp to gene:
+  is_a: association
+  represented_as: edge
+  source: snp
+  target: gene
+  input_label: snp_to_gene
+
+snp to phenotype:
+  is_a: association
+  represented_as: edge
+  source: snp
+  target: phenotype
+  input_label: snp_to_phenotype
+  properties:
+    effect_size: float
+    p_value: float
+    pmid: str
+
+gene to pathway:
+  is_a: association
+  represented_as: edge
+  source: gene
+  target: pathway
+  input_label: gene_to_pathway
+
+food to nutrient:
+  is_a: association
+  represented_as: edge
+  source: food
+  target: nutrient
+  input_label: food_to_nutrient
+  properties:
+    concentration: float
+    unit: str
+
+microbe to nutrient:
+  is_a: association
+  represented_as: edge
+  source: microbe
+  target: nutrient
+  input_label: microbe_to_nutrient
+  properties:
+    evidence_tier: str
+
+microbe to cazyme:
+  is_a: association
+  represented_as: edge
+  source: microbe
+  target: cazyme
+  input_label: microbe_to_cazyme
+
+nutrient to phenotype:
+  is_a: association
+  represented_as: edge
+  source: nutrient
+  target: phenotype
+  input_label: nutrient_to_phenotype
+  properties:
+    evidence_tier: str
+    pmid: str
+
+microbe to phenotype:
+  is_a: association
+  represented_as: edge
+  source: microbe
+  target: phenotype
+  input_label: microbe_to_phenotype
+
+phenotype to phenotype:
+  is_a: association
+  represented_as: edge
+  source: phenotype
+  target: phenotype
+  input_label: phenotype_to_phenotype
