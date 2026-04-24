@@ -153,3 +153,13 @@ phenotype to phenotype:
   source: phenotype
   target: phenotype
   input_label: phenotype_to_phenotype
+
+microbe to gene:
+  is_a: association
+  represented_as: edge
+  source: microbe
+  target: gene
+  input_label: microbe_to_gene
+  properties:
+    evidence_tier: str
+    pmid: str

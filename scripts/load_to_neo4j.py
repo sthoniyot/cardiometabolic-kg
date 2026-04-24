@@ -1,23 +1,22 @@
 """
 Load BioCypher output CSVs into Neo4j.
-- Uses the `id` column (BioCypher 0.8 default).
-- Strips BioCypher's single-quote wrapping from string values.
+Handles multi-part files (part000, part001, ...) from multiple adapters.
 """
 import os
 import csv
 import glob
+from collections import defaultdict
 from neo4j import GraphDatabase
 
 NEO4J_URI = "bolt://localhost:7687"
 NEO4J_USER = "neo4j"
-NEO4J_PASS = "password456"   # your actual password
+NEO4J_PASS = "password456"
 CSV_DIR = "data/processed/biocypher-out"
 
 driver = GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASS))
 
 
 def clean(val):
-    """Strip BioCypher's single-quote wrapping: \"'rs7903146'\" -> 'rs7903146'."""
     if isinstance(val, str) and len(val) >= 2 and val.startswith("'") and val.endswith("'"):
         return val[1:-1]
     return val
@@ -41,8 +40,7 @@ def read_data(path):
         return [row for row in csv.reader(f, delimiter=";") if row]
 
 
-def is_edge_file(filename):
-    base = os.path.basename(filename).split("-part")[0]
+def is_edge_base(base):
     header_path = os.path.join(CSV_DIR, f"{base}-header.csv")
     if not os.path.exists(header_path):
         return False
@@ -51,16 +49,15 @@ def is_edge_file(filename):
 
 
 def convert(val, typ):
-    """Convert value based on BioCypher column type."""
     val = clean(val)
     if val == "":
         return None
-    if typ == "int":
+    if typ == "int" or typ == "long":
         try:
             return int(val)
         except ValueError:
             return val
-    if typ == "float" or typ == "double":
+    if typ in ("float", "double"):
         try:
             return float(val)
         except ValueError:
@@ -68,79 +65,97 @@ def convert(val, typ):
     return val
 
 
+def discover_bases():
+    """Find all unique node/edge type bases (e.g. 'Nutrient', 'SnpToGene')."""
+    all_parts = glob.glob(f"{CSV_DIR}/*-part*.csv")
+    bases = set()
+    for p in all_parts:
+        base = os.path.basename(p).split("-part")[0]
+        bases.add(base)
+    return sorted(bases)
+
+
+def collect_parts(base):
+    """Return all part files for a given base, sorted."""
+    pattern = f"{CSV_DIR}/{base}-part*.csv"
+    return sorted(glob.glob(pattern))
+
+
 def load_nodes(session):
-    node_files = [f for f in glob.glob(f"{CSV_DIR}/*-part000.csv") if not is_edge_file(f)]
-    total = 0
-    for data_path in sorted(node_files):
-        base = os.path.basename(data_path).split("-part")[0]
+    for base in discover_bases():
+        if is_edge_base(base):
+            continue
         header_path = os.path.join(CSV_DIR, f"{base}-header.csv")
+        if not os.path.exists(header_path):
+            continue
         headers = read_header(header_path)
-        data = read_data(data_path)
 
         id_idx = next((i for i, (_, t) in enumerate(headers) if t == "ID"), None)
         if id_idx is None:
-            print(f"  {base}: SKIPPED (no :ID column)")
             continue
 
-        rows = []
-        for row in data:
-            props = {}
-            for i, (name, typ) in enumerate(headers):
-                if i >= len(row):
-                    continue
-                if typ == "LABEL":
-                    continue
-                key = "id" if typ == "ID" else (name if name else typ)
-                value = convert(row[i], typ)
-                if value is not None:
-                    props[key] = value
-            rows.append(props)
+        all_rows = []
+        for data_path in collect_parts(base):
+            for row in read_data(data_path):
+                props = {}
+                for i, (name, typ) in enumerate(headers):
+                    if i >= len(row) or typ == "LABEL":
+                        continue
+                    key = "id" if typ == "ID" else (name if name else typ)
+                    value = convert(row[i], typ)
+                    if value is not None:
+                        props[key] = value
+                all_rows.append(props)
 
-        query = f"UNWIND $rows AS row CREATE (n:{base}) SET n = row"
-        session.run(query, rows=rows)
-        print(f"  {base}: {len(rows)} nodes")
-        total += len(rows)
-    return total
+        if not all_rows:
+            continue
+
+        # Deduplicate by id, preferring the last occurrence
+        by_id = {r["id"]: r for r in all_rows if "id" in r}
+        dedup_rows = list(by_id.values())
+
+        query = f"UNWIND $rows AS row MERGE (n:{base} {{id: row.id}}) SET n += row"
+        session.run(query, rows=dedup_rows)
+        print(f"  {base}: {len(dedup_rows)} nodes")
 
 
 def load_edges(session):
-    edge_files = [f for f in glob.glob(f"{CSV_DIR}/*-part000.csv") if is_edge_file(f)]
-    total = 0
-    for data_path in sorted(edge_files):
-        base = os.path.basename(data_path).split("-part")[0]
+    for base in discover_bases():
+        if not is_edge_base(base):
+            continue
         header_path = os.path.join(CSV_DIR, f"{base}-header.csv")
         headers = read_header(header_path)
-        data = read_data(data_path)
-
         src_idx = next(i for i, (_, t) in enumerate(headers) if t == "START_ID")
         tgt_idx = next(i for i, (_, t) in enumerate(headers) if t == "END_ID")
         type_idx = next((i for i, (_, t) in enumerate(headers) if t == "TYPE"), None)
 
-        rows = []
-        for row in data:
-            props = {}
-            for i, (name, typ) in enumerate(headers):
-                if i >= len(row) or i in (src_idx, tgt_idx, type_idx) or typ == "LABEL":
-                    continue
-                value = convert(row[i], typ)
-                if name and value is not None:
-                    props[name] = value
-            rows.append({
-                "_from": clean(row[src_idx]),
-                "_to": clean(row[tgt_idx]),
-                "props": props,
-            })
+        all_rows = []
+        for data_path in collect_parts(base):
+            for row in read_data(data_path):
+                props = {}
+                for i, (name, typ) in enumerate(headers):
+                    if i >= len(row) or i in (src_idx, tgt_idx, type_idx) or typ == "LABEL":
+                        continue
+                    value = convert(row[i], typ)
+                    if name and value is not None:
+                        props[name] = value
+                all_rows.append({
+                    "_from": clean(row[src_idx]),
+                    "_to": clean(row[tgt_idx]),
+                    "props": props,
+                })
+
+        if not all_rows:
+            continue
 
         query = (
             "UNWIND $rows AS row "
             "MATCH (a {id: row._from}), (b {id: row._to}) "
             f"CREATE (a)-[r:{base}]->(b) SET r = row.props"
         )
-        result = session.run(query, rows=rows)
+        result = session.run(query, rows=all_rows)
         created = result.consume().counters.relationships_created
-        print(f"  {base}: {created} edges (from {len(rows)} rows)")
-        total += created
-    return total
+        print(f"  {base}: {created} edges (from {len(all_rows)} rows)")
 
 
 def main():
