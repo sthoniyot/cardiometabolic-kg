@@ -49,6 +49,9 @@ KEYWORD_TO_MONDO = {
 }
 
 
+JUNK_GENE_SYMBOLS = {"NR", "NA", "intergenic", "-", "", "null", "None"}
+
+
 class GWASAdapter:
     def __init__(self, tsv_path="data/raw/gwas/gwas_catalog.tsv",
                  pvalue_cutoff=5e-8):
@@ -133,10 +136,10 @@ class GWASAdapter:
                     self._snp_phenotype_edges.append((rsid, mondo_id, props))
 
                 # Gene nodes + SNP -> Gene edges
-                if gene_symbols and gene_symbols not in ("NR", "intergenic", "-"):
+                if gene_symbols and gene_symbols not in JUNK_GENE_SYMBOLS:
                     for sym in re.split(r"[,;]", gene_symbols):
                         sym = sym.strip()
-                        if not sym or sym in ("NR", "intergenic", "-"):
+                        if not sym or sym in JUNK_GENE_SYMBOLS:
                             continue
                         gene_id = f"HGNC:{sym}"
                         if gene_id not in self._genes:

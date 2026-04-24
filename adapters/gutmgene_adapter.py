@@ -46,6 +46,8 @@ class GutMGeneAdapter:
         self._microbe_nutrient_edges = []
         self._microbe_gene_edges = []
         self._microbe_phenotype_edges = set()
+        self._seen_mn = set()
+        self._seen_mg = set()
         self._parse()
 
     def _read_csv(self, filename):
@@ -115,7 +117,7 @@ class GutMGeneAdapter:
             pmid = row.get("PMID", "").strip()
             condition = row.get("Condition", "").strip()
             tier = row.get("Associative mode", "").strip()
-            self._microbe_nutrient_edges.append((
+            if (microbe_id, chebi) not in self._seen_mn: self._seen_mn.add((microbe_id, chebi)); self._microbe_nutrient_edges.append((
                 microbe_id, chebi,
                 {"evidence_tier": tier, "pmid": pmid, "condition": condition},
             ))
@@ -134,7 +136,7 @@ class GutMGeneAdapter:
             gene_id = self._add_gene(gene_symbol)
             pmid = row.get("PMID", "").strip()
             tier = row.get("Associative mode", "").strip()
-            self._microbe_gene_edges.append((
+            if (microbe_id, gene_id) not in self._seen_mg: self._seen_mg.add((microbe_id, gene_id)); self._microbe_gene_edges.append((
                 microbe_id, gene_id,
                 {"evidence_tier": tier, "pmid": pmid},
             ))
