@@ -1,13 +1,30 @@
 """
 gutMGene adapter for cardiometabolic KG.
 
-Yields Microbe nodes, plus extra Nutrient and Gene nodes for any
-metabolites/genes referenced by gutMGene that are not already in
-the graph from USDA or GWAS. Edges then land on valid nodes.
+Reads the two literature-based association CSVs from gutMGene v2.0 and yields
+Microbe nodes plus three edge types:
+  - Microbe -> Nutrient (from the metabolite file)
+  - Microbe -> Gene (from the host-gene file)
+  - Microbe -> Phenotype (derived from DOID column, mapped to MONDO)
+
+Also yields Nutrient and Gene nodes for IDs not already in the graph from
+USDA / GWAS, so edges always land on valid nodes.
 
 Filters:
-  - human only (drop mouse)
-  - causal associations only (drop correlational)
+  - human only (drop mouse rows)
+  - causal associations only (drop correlational; can be relaxed)
+  - non-empty source / target identifiers
+
+PMID forward-fill:
+  gutMGene's CSVs occasionally leave the PMID column blank when a row
+  belongs to the same `Index` group as a preceding fully-annotated row
+  (a manual-curation "fill-down" convention). This adapter forward-fills
+  the PMID across rows that share the same Index value.
+
+Edge deduplication:
+  When the same (microbe, target) pair is reported in multiple papers,
+  only one edge is yielded; subsequent occurrences are dropped (the first
+  PMID wins).
 """
 import csv
 import os
@@ -40,9 +57,9 @@ class GutMGeneAdapter:
         self.gutmgene_dir = gutmgene_dir
         self.human_only = human_only
         self.causal_only = causal_only
-        self._microbes = {}                 # ncbi_id -> props
-        self._extra_nutrients = {}          # chebi_id -> props
-        self._extra_genes = {}              # hgnc_id -> props
+        self._microbes = {}
+        self._extra_nutrients = {}
+        self._extra_genes = {}
         self._microbe_nutrient_edges = []
         self._microbe_gene_edges = []
         self._microbe_phenotype_edges = set()
@@ -50,16 +67,44 @@ class GutMGeneAdapter:
         self._seen_mg = set()
         self._parse()
 
+    # ------------------------------------------------------------------
+    # CSV reading with encoding fallback + PMID forward-fill
+    # ------------------------------------------------------------------
     def _read_csv(self, filename):
         path = os.path.join(self.gutmgene_dir, filename)
         for encoding in ("utf-8", "latin-1"):
             try:
                 with open(path, newline="", encoding=encoding) as f:
-                    return list(csv.DictReader(f))
+                    rows = list(csv.DictReader(f))
+                self._forward_fill_pmid(rows)
+                return rows
             except UnicodeDecodeError:
                 continue
         raise RuntimeError(f"Could not decode {path}")
 
+    @staticmethod
+    def _forward_fill_pmid(rows):
+        """
+        gutMGene CSVs sometimes leave PMID blank for follow-up rows in the
+        same Index group. We propagate the most recent non-empty PMID
+        forward within the same Index value.
+
+        Mutates rows in place.
+        """
+        last_pmid_by_index = {}
+        for row in rows:
+            idx = (row.get("Index") or "").strip()
+            pmid = (row.get("PMID") or "").strip()
+            if not idx:
+                continue
+            if pmid:
+                last_pmid_by_index[idx] = pmid
+            elif idx in last_pmid_by_index:
+                row["PMID"] = last_pmid_by_index[idx]
+
+    # ------------------------------------------------------------------
+    # Filters and node helpers
+    # ------------------------------------------------------------------
     def _passes_filters(self, row):
         if self.human_only and row.get("human/mouse", "").strip().lower() != "human":
             return False
@@ -95,12 +140,15 @@ class GutMGeneAdapter:
         return gene_id
 
     def _add_phenotype_edge(self, microbe_id, doid, tier):
-        doid = doid.strip()
+        doid = (doid or "").strip()
         if not doid or doid not in DOID_TO_MONDO:
             return
         mondo_id = DOID_TO_MONDO[doid]
         self._microbe_phenotype_edges.add((microbe_id, mondo_id, tier))
 
+    # ------------------------------------------------------------------
+    # File parsers
+    # ------------------------------------------------------------------
     def _parse_metabolite_file(self):
         for row in self._read_csv(METAB_FILE):
             if not self._passes_filters(row):
@@ -112,12 +160,15 @@ class GutMGeneAdapter:
             name = row.get("Metabolite", "").strip()
             if not chebi or not chebi.startswith("CHEBI:"):
                 continue
-            # Ensure the nutrient node exists
             self._add_nutrient(chebi, name)
             pmid = row.get("PMID", "").strip()
             condition = row.get("Condition", "").strip()
             tier = row.get("Associative mode", "").strip()
-            if (microbe_id, chebi) not in self._seen_mn: self._seen_mn.add((microbe_id, chebi)); self._microbe_nutrient_edges.append((
+            key = (microbe_id, chebi)
+            if key in self._seen_mn:
+                continue
+            self._seen_mn.add(key)
+            self._microbe_nutrient_edges.append((
                 microbe_id, chebi,
                 {"evidence_tier": tier, "pmid": pmid, "condition": condition},
             ))
@@ -136,7 +187,11 @@ class GutMGeneAdapter:
             gene_id = self._add_gene(gene_symbol)
             pmid = row.get("PMID", "").strip()
             tier = row.get("Associative mode", "").strip()
-            if (microbe_id, gene_id) not in self._seen_mg: self._seen_mg.add((microbe_id, gene_id)); self._microbe_gene_edges.append((
+            key = (microbe_id, gene_id)
+            if key in self._seen_mg:
+                continue
+            self._seen_mg.add(key)
+            self._microbe_gene_edges.append((
                 microbe_id, gene_id,
                 {"evidence_tier": tier, "pmid": pmid},
             ))
@@ -146,6 +201,9 @@ class GutMGeneAdapter:
         self._parse_metabolite_file()
         self._parse_gene_file()
 
+    # ------------------------------------------------------------------
+    # BioCypher emit interface
+    # ------------------------------------------------------------------
     def get_nodes(self):
         for microbe_id, props in self._microbes.items():
             yield (microbe_id, "microbe", props)
@@ -164,11 +222,16 @@ class GutMGeneAdapter:
                    {"evidence_tier": tier})
 
     def stats(self):
+        # Count edges that have a non-empty PMID (after forward-fill)
+        mn_pmid = sum(1 for (_, _, p) in self._microbe_nutrient_edges if p.get("pmid"))
+        mg_pmid = sum(1 for (_, _, p) in self._microbe_gene_edges if p.get("pmid"))
         return {
             "microbes": len(self._microbes),
             "extra_nutrients": len(self._extra_nutrients),
             "extra_genes": len(self._extra_genes),
             "microbe_nutrient_edges": len(self._microbe_nutrient_edges),
+            "microbe_nutrient_edges_with_pmid": mn_pmid,
             "microbe_gene_edges": len(self._microbe_gene_edges),
+            "microbe_gene_edges_with_pmid": mg_pmid,
             "microbe_phenotype_edges": len(self._microbe_phenotype_edges),
         }
