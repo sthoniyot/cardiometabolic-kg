@@ -122,6 +122,8 @@ microbe to nutrient:
   input_label: microbe_to_nutrient
   properties:
     evidence_tier: str
+    pmid: str
+    condition: str
 
 microbe to cazyme:
   is_a: association
