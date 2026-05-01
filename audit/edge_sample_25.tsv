@@ -1,0 +1,26 @@
+edge_type	source_id	source_name	source_chr	target_id	target_name	target_symbol	effect_size	p_value	amount	unit	evidence	condition	pmid	verdict	audit_notes
+SnpToPhenotype	rs9994887		4		hypercholesterolemia		1.03746	3.00E-09					36329257	VERIFIED	
+SnpToPhenotype	rs9594460		13		hypertensive disorder		0.0119	8.00E-09					40436827	VERIFIED	
+SnpToPhenotype	rs28446899		8		hypertriglyceridemia		0.0365974	5.00E-11					40307439	VERIFIED	
+SnpToPhenotype	rs4241325		2		obesity disorder		0.012719	3.00E-08					37280435	PARTIAL	
+SnpToPhenotype	rs34591516		8		hypertensive disorder		0.5807	1.00E-09					27618447	N/A	
+SnpToPhenotype	rs10861861		12		metabolic syndrome		0.0094164	8.00E-14					39349817	UNVERIFIED	
+SnpToPhenotype	rs192042440		16		obesity disorder			1.00E-12					30595370	PARTIAL	
+FoodToNutrient	FDC:333008	"Cookies, oatmeal, soft, with raisins"		USDA:653	SFA 17:0				0.014	G				PARTIAL	
+FoodToNutrient	FDC:333008	"Cookies, oatmeal, soft, with raisins"		USDA:607	SFA 4:0				0.011	G				PARTIAL	
+FoodToNutrient	FDC:746782	"Milk, whole, 3.25% milkfat, with added vitamin D"		USDA:320	"Vitamin A, RAE"				32	UG				VERIFIED	
+FoodToNutrient	FDC:2685582	"Tomato, puree, canned"		USDA:211	Glucose				2.06	G				VERIFIED	
+FoodToNutrient	FDC:1104812	"Flour, rice, brown"		USDA:202	Nitrogen				1.15	G				VERIFIED	
+FoodToNutrient	FDC:2646172	"Beef, ribeye, steak, boneless, choice, raw"		USDA:255	Water				60.63	G				VERIFIED	
+MicrobeToNutrient	NCBITaxon:216816	Bifidobacterium longum		CHEBI:67988	Ginsenoside Rd						causally	healthy	22466563	VERIFIED	
+MicrobeToNutrient	NCBITaxon:29347	[Clostridium] scindens		CHEBI:15740	Formate						causally	healthy	30737348	VERIFIED	
+MicrobeToNutrient	NCBITaxon:1449386	bacterium MRG-IFC-1		CHEBI:28197	Daidzein						causally	healthy	25199800	PARTIAL	
+MicrobeToNutrient	NCBITaxon:1590	Lactiplantibacillus plantarum		CHEBI:29073	"Vitamin C, total ascorbic acid"						causally	healthy	36564415	UNVERIFIED	
+MicrobeToNutrient	NCBITaxon:292800	Flavonifractor plautii		CHEBI:41941	"3,4-Dihydroxyphenylacetic acid"						causally	healthy	14532034	VERIFIED	
+MicrobeToNutrient	NCBITaxon:821	Phocaeicola vulgatus		CHEBI:34741	Equol						causally	colorectal cancer	32218321	VERIFIED	
+MicrobeToGene	NCBITaxon:823	Parabacteroides distasonis				NFKB1					causally		17485456	VERIFIED	
+MicrobeToGene	NCBITaxon:47715	Lacticaseibacillus rhamnosus				TJP1					causally		31732863	VERIFIED	
+MicrobeToGene	NCBITaxon:216816	Bifidobacterium longum				CYP7A1					causally		29800811	VERIFIED	
+MicrobeToGene	NCBITaxon:1579	Lactobacillus acidophilus				BCL10					causally		24130731	VERIFIED	
+MicrobeToGene	NCBITaxon:1597	Lacticaseibacillus paracasei				IL18					causally		30767231	PARTIAL	
+MicrobeToGene	NCBITaxon:851	Fusobacterium nucleatum				LDHA					causally		33318144	PARTIAL	

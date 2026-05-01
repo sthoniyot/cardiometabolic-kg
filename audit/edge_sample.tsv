@@ -1,201 +1,201 @@
 edge_type	source_id	source_name	source_chr	target_id	target_name	target_symbol	effect_size	p_value	amount	unit	evidence	condition	pmid	verdict	audit_notes
-SnpToPhenotype	rs10842675		12		obesity disorder		0.0189509	1e-10					34021172		
-SnpToPhenotype	rs73591955		16		hypercholesterolemia		0.02641853	2e-23					39789286		
-SnpToPhenotype	rs9643778		8		obesity disorder		0.0116	3e-12					40436827		
-SnpToPhenotype	rs2167750		4		hypercholesterolemia		0.0196	4e-21					34594039		
-SnpToPhenotype	rs34591516		8		hypertensive disorder		0.5807	1e-09					27618447		
-SnpToPhenotype	rs151193009		1		coronary artery disease		0.447667	1e-14					33020668		
-SnpToPhenotype	rs76692773		19		hypercholesterolemia		0.0417	7e-20					33462484		
-SnpToPhenotype	rs11332772		3		type 2 diabetes mellitus		1.05	1e-10					32499647		
-SnpToPhenotype	rs1051481		19		hypertensive disorder		0.0171535	7e-10					39134668		
-SnpToPhenotype	rs67269656		2		hypercholesterolemia		0.010846	2e-09					34887591		
-SnpToPhenotype	rs10493544		1		obesity disorder		0.1321	2e-11					31504550		
-SnpToPhenotype	rs4241325		2		obesity disorder		0.012719	3e-08					37280435		
-SnpToPhenotype	rs12669267		7		obesity disorder			5e-09					31669095		
-SnpToPhenotype	rs11045171		12		obesity disorder		0.00814204	1e-14					32042192		
-SnpToPhenotype	rs78138914		18		obesity disorder		0.0403	6e-29					36581621		
-SnpToPhenotype	rs2971668		7		metabolic syndrome		0.080658	4e-10					38201907		
-SnpToPhenotype	rs4286925		8		metabolic syndrome		0.00987226	2e-12					39349817		
-SnpToPhenotype	rs147412694		21		hypercholesterolemia		0.0222353	1e-15					34887591		
-SnpToPhenotype	rs10733997		10		type 2 diabetes mellitus			1e-08					32541925		
-SnpToPhenotype	rs28446899		8		hypertriglyceridemia		0.0365974	5e-11					40307439		
-SnpToPhenotype	rs559205936		3		hypertensive disorder			2e-08					36768488		
-SnpToPhenotype	rs73066485		7		hypercholesterolemia		0.0295	2e-16					30275531		
-SnpToPhenotype	rs12410155		1		obesity disorder			7e-12					36137488		
-SnpToPhenotype	rs9594460		13		hypertensive disorder		0.0119	8e-09					40436827		
-SnpToPhenotype	rs7247304		19		obesity disorder		0.0289976	2e-15					34021172		
-SnpToPhenotype	rs9994887		4		hypercholesterolemia		1.03746	3e-09					36329257		
-SnpToPhenotype	rs192042440		16		obesity disorder			1e-12					30595370		
-SnpToPhenotype	rs200831171		11		hypertriglyceridemia		1.16205	4e-43					34226706		
-SnpToPhenotype	rs6570530		6		hypertensive disorder		0.011976346	3e-12					39537608		
-SnpToPhenotype	rs17276464		4		obesity disorder		0.0096	5e-09					30239722		
-SnpToPhenotype	rs7977765		12		hypertriglyceridemia		0.01796	7e-10					36376304		
-SnpToPhenotype	rs2992649		1		obesity disorder			9e-11					31669095		
-SnpToPhenotype	rs1494205		10		obesity disorder		0.0146	1e-15					30239722		
-SnpToPhenotype	rs28496545		12		hypercholesterolemia		0.0368659	6e-12					34594039		
-SnpToPhenotype	rs11983783		7		hypertensive disorder		0.009944416	1e-08					39537608		
-SnpToPhenotype	rs1010		2		coronary artery disease			4e-16					35285134		
-SnpToPhenotype	rs4559942		17		hypertriglyceridemia		0.0135489	1e-08					32203549		
-SnpToPhenotype	rs2211864		21		obesity disorder		0.0177778	8e-09					34021172		
-SnpToPhenotype	rs12676490		8		obesity disorder		0.0253134	2e-09					34021172		
-SnpToPhenotype	rs148540016		5		hypertensive disorder			6e-09					30595370		
-SnpToPhenotype	rs11643024		16		hyperglycemia		0.0084	8e-10					34059833		
-SnpToPhenotype	rs34872471		10		type 2 diabetes mellitus		1.4231888	1e-94					29358691		
-SnpToPhenotype	rs764553160		1		obesity disorder		0.0201127	4e-11					34021172		
-SnpToPhenotype	rs2266925		7		obesity disorder		0.0202193	1e-08					34021172		
-SnpToPhenotype	rs242556		17		obesity disorder		0.0130933	2e-08					37280435		
-SnpToPhenotype	rs10861861		12		metabolic syndrome		0.0094164	8e-14					39349817		
-SnpToPhenotype	rs7244158		18		hypercholesterolemia		0.0501	2e-09					33462484		
-SnpToPhenotype	rs9299254		9		obesity disorder		0.0200066	4e-09					40436827		
-SnpToPhenotype	rs73496517		19		hypercholesterolemia		0.0353	7e-17					33462484		
-SnpToPhenotype	rs61779284		1		type 2 diabetes mellitus		0.0703	1e-48					32541925		
-FoodToNutrient	FDC:1750342	Apples, granny smith, with skin, raw		CHEBI:24875	Iron, Fe				0.06963	MG					
-FoodToNutrient	FDC:333008	Cookies, oatmeal, soft, with raisins		USDA:653	SFA 17:0				0.014	G					
-FoodToNutrient	FDC:334897	"Beef, loin, tenderloin roast, separable lean only, boneless, trimmed to 0"" fat, select, cooked, roasted"		CHEBI:26216	Potassium, K				352.0	MG					
-FoodToNutrient	FDC:746776	Milk, nonfat, fluid, with added vitamin A and vitamin D (fat free or skim)		CHEBI:26607	Fatty acids, total saturated				0.049	G					
-FoodToNutrient	FDC:331897	Chicken, broilers or fryers, drumstick, meat only, cooked, braised		USDA:840	PUFA 20:2 c				0.01	G					
-FoodToNutrient	FDC:1105664	Apples, granny smith, with skin, raw		USDA:202	Nitrogen				0.04	G					
-FoodToNutrient	FDC:2261420	Flour, almond		CHEBI:16796	Folate, total				37.83	UG					
-FoodToNutrient	FDC:330869	Turkey, ground, 93% lean, 7% fat, pan-broiled crumbles		USDA:455	Choline, from sphingomyelin				8.1	MG					
-FoodToNutrient	FDC:2515379	Nuts, pistachio nuts, raw		CHEBI:33252	Ash				2.83	G					
-FoodToNutrient	FDC:2646172	Beef, ribeye, steak, boneless, choice, raw		USDA:255	Water				60.63	G					
-FoodToNutrient	FDC:1750337	Soy milk, unsweetened, plain, shelf stable		USDA:501	Tryptophan				0.04625	G					
-FoodToNutrient	FDC:2346403	Potatoes, gold, without skin, raw		CHEBI:28384	Vitamin K (phylloquinone)				0.8	UG					
-FoodToNutrient	FDC:325198	Cheese, pasteurized process, American, vitamin D fortified		CHEBI:26208	Fatty acids, total polyunsaturated				1.09	G					
-FoodToNutrient	FDC:1104812	Flour, rice, brown		USDA:202	Nitrogen				1.15	G					
-FoodToNutrient	FDC:2346412	Grapes, red, seedless, raw		CHEBI:36080	Protein				0.914375	G					
-FoodToNutrient	FDC:333008	Cookies, oatmeal, soft, with raisins		USDA:607	SFA 4:0				0.011	G					
-FoodToNutrient	FDC:2346413	Grapes, green, seedless, raw		CHEBI:24875	Iron, Fe				0.1991	MG					
-FoodToNutrient	FDC:2003602	Mushroom, maitake		CHEBI:26948	Thiamin				0.009875	MG					
-FoodToNutrient	FDC:2258591	Peppers, bell, orange, raw		CHEBI:29073	Vitamin C, total ascorbic acid				158.3	MG					
-FoodToNutrient	FDC:790508	Butter, stick, salted		USDA:610	SFA 10:0				1.92	G					
-FoodToNutrient	FDC:334462	Restaurant, Chinese, sweet and sour pork		USDA:517	Proline				0.447	G					
-FoodToNutrient	FDC:748967	Eggs, Grade A, Large, egg whole		USDA:675	PUFA 18:2 n-6 c,c				1.46	G					
-FoodToNutrient	FDC:335240	Bread, whole-wheat, commercially prepared		CHEBI:22984	Calcium, Ca				163.0	MG					
-FoodToNutrient	FDC:326135	Cheese, swiss		USDA:624	SFA 22:0				0.014	G					
-FoodToNutrient	FDC:327699	Strawberries, raw		USDA:255	Water				91.1	G					
-FoodToNutrient	FDC:1104647	Garlic, raw		CHEBI:27568	Selenium, Se				9.8	UG					
-FoodToNutrient	FDC:326135	Cheese, swiss		CHEBI:18291	Manganese, Mn				0.027	MG					
-FoodToNutrient	FDC:2257044	Soy milk, sweetened, plain, refrigerated		USDA:505	Lysine				0.2	G					
-FoodToNutrient	FDC:748366	Oil, soybean		USDA:653	SFA 17:0				0.086	G					
-FoodToNutrient	FDC:747445	Beans, Dry, Pinto (0% moisture)		CHEBI:28659	Phosphorus, P				507.0	MG					
-FoodToNutrient	FDC:2684445	Fish, catfish, farm raised, raw		USDA:314	Iodine, I				1.94	UG					
-FoodToNutrient	FDC:1750351	Oil, olive, extra light		USDA:615	SFA 20:0				0.4017	G					
-FoodToNutrient	FDC:335425	Beans, Dry, Brown (0% moisture)		USDA:209	Starch				37.2	G					
-FoodToNutrient	FDC:1105430	Apples, red delicious, with skin, raw		CHEBI:17015	Riboflavin				0.066	MG					
-FoodToNutrient	FDC:746761	"Beef, round, top round roast, boneless, separable lean only, trimmed to 0"" fat, select, raw"		CHEBI:33234	Vitamin E (alpha-tocopherol)				0.21	MG					
-FoodToNutrient	FDC:1750342	Apples, granny smith, with skin, raw		CHEBI:16646	Carbohydrate, by difference				14.142975	G					
-FoodToNutrient	FDC:334720	Restaurant, Latino, pupusas con frijoles (pupusas, bean)		USDA:501	Tryptophan				0.057	G					
-FoodToNutrient	FDC:2685573	Cauliflower, raw		CHEBI:33252	Ash				0.6788	G					
-FoodToNutrient	FDC:1750349	Oil, sunflower		USDA:652	SFA 15:0				0.01819	G					
-FoodToNutrient	FDC:2003599	Mushroom, king oyster		USDA:	Total Tocopherols				0.8038	MG					
-FoodToNutrient	FDC:322228	Milk, lowfat, fluid, 1% milkfat, with added vitamin A and vitamin D		USDA:613	SFA 16:0				0.265	G					
-FoodToNutrient	FDC:2685582	Tomato, puree, canned		USDA:211	Glucose				2.06	G					
-FoodToNutrient	FDC:746782	Milk, whole, 3.25% milkfat, with added vitamin D		USDA:320	Vitamin A, RAE				32.0	UG					
-FoodToNutrient	FDC:2514745	Pork, ground, raw		CHEBI:17855	Total lipid (fat)				17.49	G					
-FoodToNutrient	FDC:322559	Milk, nonfat, fluid, with added vitamin A and vitamin D (fat free or skim)		CHEBI:26607	Fatty acids, total saturated				0.049	G					
-FoodToNutrient	FDC:329370	Cheese, mozzarella, low moisture, part-skim		CHEBI:27306	Vitamin B-6				0.09	MG					
-FoodToNutrient	FDC:322892	Milk, whole, 3.25% milkfat, with added vitamin D		USDA:501	Tryptophan				0.043	G					
-FoodToNutrient	FDC:334247	Sugars, granulated		CHEBI:18291	Manganese, Mn				0.004	MG					
-FoodToNutrient	FDC:746761	"Beef, round, top round roast, boneless, separable lean only, trimmed to 0"" fat, select, raw"		USDA:654	SFA 24:0				0.002	G					
-FoodToNutrient	FDC:2346410	Raspberries, raw		USDA:416	Biotin				3.433	UG					
-MicrobeToNutrient	NCBITaxon:28026	Bifidobacterium pseudocatenulatum		CHEBI:28499	Kaempferol						causally	healthy	17439230		
-MicrobeToNutrient	NCBITaxon:292800	Flavonifractor plautii		CHEBI:32980	3-(4-Hydroxyphenyl)propionic acid						causally	healthy	14532034		
-MicrobeToNutrient	NCBITaxon:1502	Clostridium perfringens		CHEBI:17968	Butyrate						causally	healthy	37592891		
-MicrobeToNutrient	NCBITaxon:572511	Blautia		CHEBI:17968	Butyrate						causally	idiopathic inflammatory myopathies	35360108		
-MicrobeToNutrient	NCBITaxon:817	Bacteroides fragilis		CHEBI:5298	Genipin						causally	healthy	22553067		
-MicrobeToNutrient	NCBITaxon:626932	Alistipes indistinctus		CHEBI:28484	Isovaleric acid						causally	healthy	19667375		
-MicrobeToNutrient	NCBITaxon:821	Phocaeicola vulgatus		CHEBI:34741	Equol						causally	colorectal cancer	32218321		
-MicrobeToNutrient	NCBITaxon:673271	Catenibacillus scindens		CHEBI:28197	Daidzein						causally	healthy	20946528		
-MicrobeToNutrient	NCBITaxon:39490	Eubacterium ramulus		CHEBI:41941	3,4-Dihydroxyphenylacetic acid						causally	healthy	10648107		
-MicrobeToNutrient	NCBITaxon:1596	Lactobacillus gasseri		CHEBI:17521	Quinic acid						causally	healthy	11412317		
-MicrobeToNutrient	NCBITaxon:29347	[Clostridium] scindens		CHEBI:15740	Formate						causally	healthy	30737348		
-MicrobeToNutrient	NCBITaxon:47678	Bacteroides caccae		CHEBI:17405	4-Pyridoxic acid						causally	healthy	31235863		
-MicrobeToNutrient	NCBITaxon:562	Escherichia coli		CHEBI:18139	Trimethylamine						causally	healthy	34362844		
-MicrobeToNutrient	NCBITaxon:1343173	Enterococcus sp. 45		CHEBI:18152	Myricetin						causally	healthy	24882500		
-MicrobeToNutrient	NCBITaxon:1590	Lactiplantibacillus plantarum		CHEBI:29073	Vitamin C, total ascorbic acid						causally	healthy	36564415		
-MicrobeToNutrient	NCBITaxon:1678	Bifidobacterium		CHEBI:15740	Formate						causally	healthy	37592891		
-MicrobeToNutrient	NCBITaxon:39490	Eubacterium ramulus		CHEBI:50202	5,7-Dihydroxy-2-(4-hydroxyphenyl)chroman-4-one						causally	healthy	15466559		
-MicrobeToNutrient	NCBITaxon:292800	Flavonifractor plautii		CHEBI:41941	3,4-Dihydroxyphenylacetic acid						causally	healthy	14532034		
-MicrobeToNutrient	NCBITaxon:216816	Bifidobacterium longum		CHEBI:67988	Ginsenoside Rd						causally	healthy	22466563		
-MicrobeToNutrient	NCBITaxon:1485	Clostridium		CHEBI:30763	4-Hydroxybenzoic acid						causally	healthy	36076453		
-MicrobeToNutrient	NCBITaxon:1509	Clostridium sporogenes		CHEBI:24813	Indole-3-lactic acid						causally	healthy	33076930		
-MicrobeToNutrient	NCBITaxon:33882	Microbacterium		CHEBI:17405	4-Pyridoxic acid						causally	healthy	31235863		
-MicrobeToNutrient	NCBITaxon:1449386	bacterium MRG-IFC-1		CHEBI:28197	Daidzein						causally	healthy	25199800		
-MicrobeToNutrient	NCBITaxon:1266601	Bacillus sp. 46		CHEBI:68352	Isoquercetin						causally	healthy	24463398		
-MicrobeToNutrient	NCBITaxon:853	Faecalibacterium prausnitzii		CHEBI:47952	D-Glucuronic Acid						causally	colitis	25900655		
-MicrobeToNutrient	NCBITaxon:29347	[Clostridium] scindens		CHEBI:30089	Acetate						causally	healthy	30737348		
-MicrobeToNutrient	NCBITaxon:33945	Enterococcus avium		CHEBI:17558	Quercitrin						causally	healthy	26505733		
-MicrobeToNutrient	NCBITaxon:673271	Catenibacillus scindens		CHEBI:32980	3-(4-Hydroxyphenyl)propionic acid						causally	healthy	20946528		
-MicrobeToNutrient	NCBITaxon:39488	Anaerobutyricum hallii		CHEBI:17968	Butyrate						causally	healthy	28894218		
-MicrobeToNutrient	NCBITaxon:239934	Akkermansia		CHEBI:17687	Glycocholic acid						causally	healthy	31235863		
-MicrobeToNutrient	NCBITaxon:562	Escherichia coli		CHEBI:17521	Quinic acid						causally	healthy	11412317		
-MicrobeToNutrient	NCBITaxon:29347	[Clostridium] scindens		CHEBI:28834	Deoxycholic Acid						causally	healthy	23836456		
-MicrobeToNutrient	NCBITaxon:1680	Bifidobacterium adolescentis		CHEBI:28499	Kaempferol						causally	healthy	17439230		
-MicrobeToNutrient	NCBITaxon:1686	Bifidobacterium catenulatum		CHEBI:28197	Daidzein						causally	healthy	17439230		
-MicrobeToNutrient	NCBITaxon:37734	Enterococcus casseliflavus		CHEBI:16651	L-lactate						causally	healthy	9914304		
-MicrobeToNutrient	NCBITaxon:1351	Enterococcus faecalis		CHEBI:67246	Lariciresinol						causally	healthy	16765860		
-MicrobeToNutrient	NCBITaxon:626938	Succinatimonas hippei		CHEBI:30031	Succinate						causally	healthy	19749029		
-MicrobeToNutrient	NCBITaxon:1509	Clostridium sporogenes		CHEBI:15729	L-ornithine						causally	healthy	36070752		
-MicrobeToNutrient	NCBITaxon:4932	Saccharomyces cerevisiae		CHEBI:16236	Ethanol						causally	healthy	26858714		
-MicrobeToNutrient	NCBITaxon:186803	Lachnospiraceae		CHEBI:43580	3-Indolepropionic acid						causally	healthy	31030641		
-MicrobeToNutrient	NCBITaxon:142586	Eubacterium sp.		CHEBI:81556	Enterodiol						causally	healthy	16765860		
-MicrobeToNutrient	NCBITaxon:39490	Eubacterium ramulus		CHEBI:32980	3-(4-Hydroxyphenyl)propionic acid						causally	healthy	10648107		
-MicrobeToNutrient	NCBITaxon:1926307	Veillonella sp.		CHEBI:34741	Equol						causally	healthy	19580283		
-MicrobeToNutrient	NCBITaxon:28116	Bacteroides ovatus		CHEBI:16243	Quercetin						causally	healthy	19580283		
-MicrobeToNutrient	NCBITaxon:68766	Fusobacterium sp.		CHEBI:16136	Hydrogen Sulfide						causally	Functional dyspepsia	36167662		
-MicrobeToNutrient	NCBITaxon:745368	Gemmiger formicilis		CHEBI:17968	Butyrate						causally	healthy	36771360		
-MicrobeToNutrient	NCBITaxon:544645	Butyricimonas virosa		CHEBI:16135	Isobutyric acid						causally	healthy	19542124		
-MicrobeToNutrient	NCBITaxon:1485	Clostridium		CHEBI:15361	Pyruvate						causally	healthy	22325238		
-MicrobeToNutrient	NCBITaxon:820	Bacteroides uniformis		CHEBI:34741	Equol						causally	colorectal cancer	32218321		
-MicrobeToNutrient	NCBITaxon:1338	Streptococcus intermedius		CHEBI:34741	Equol						causally	healthy	19580283		
-MicrobeToGene	NCBITaxon:1590	Lactiplantibacillus plantarum				HNF4A					causally		21143932		
-MicrobeToGene	NCBITaxon:562	Escherichia coli				OCLN					causally		31315566		
-MicrobeToGene	NCBITaxon:47715	Lacticaseibacillus rhamnosus				TJP1					causally		31732863		
-MicrobeToGene	NCBITaxon:33038	Mediterraneibacter gnavus				MUC2					causally		26868655		
-MicrobeToGene	NCBITaxon:1590	Lactiplantibacillus plantarum				CNKSR3					causally		21143932		
-MicrobeToGene	NCBITaxon:1597	Lacticaseibacillus paracasei				IL18					causally		30767231		
-MicrobeToGene	NCBITaxon:1590	Lactiplantibacillus plantarum				IFNG					causally		18077037		
-MicrobeToGene	NCBITaxon:1304	Streptococcus salivarius				NFKB1					causally		17485456		
-MicrobeToGene	NCBITaxon:1304	Streptococcus salivarius				FABP2					causally		25946041		
-MicrobeToGene	NCBITaxon:853	Faecalibacterium prausnitzii				FOXP3					causally		23643066		
-MicrobeToGene	NCBITaxon:823	Parabacteroides distasonis				CXCL8					causally		17485456		
-MicrobeToGene	NCBITaxon:328812	Parabacteroides goldsteinii				MYD88					causally		36585238		
-MicrobeToGene	NCBITaxon:1351	Enterococcus faecalis				IL10					causally		18234854		
-MicrobeToGene	NCBITaxon:851	Fusobacterium nucleatum				LDHA					causally		33318144		
-MicrobeToGene	NCBITaxon:1579	Lactobacillus acidophilus				SLC9A3					causally		23086913		
-MicrobeToGene	NCBITaxon:47715	Lacticaseibacillus rhamnosus				OCLN					causally		31732863		
-MicrobeToGene	NCBITaxon:239935	Akkermansia muciniphila				IL6					causally		28249045		
-MicrobeToGene	NCBITaxon:1590	Lactiplantibacillus plantarum				CLDN1					causally		20412608		
-MicrobeToGene	NCBITaxon:1597	Lacticaseibacillus paracasei				IL4					causally		30767231		
-MicrobeToGene	NCBITaxon:1689	Bifidobacterium dentium				Htr1a					causally		32795610		
-MicrobeToGene	NCBITaxon:239935	Akkermansia muciniphila				IL10					causally		30765132		
-MicrobeToGene	NCBITaxon:1590	Lactiplantibacillus plantarum				ACTB					causally		21143932		
-MicrobeToGene	NCBITaxon:1351	Enterococcus faecalis				PLIN2					causally		18234854		
-MicrobeToGene	NCBITaxon:853	Faecalibacterium prausnitzii				HDAC3					causally		30809639		
-MicrobeToGene	NCBITaxon:853	Faecalibacterium prausnitzii				TLR2					causally		29112296		
-MicrobeToGene	NCBITaxon:53345	Enterococcus durans				IL6					causally		28239378		
-MicrobeToGene	NCBITaxon:1382	Lancefieldella parvula				ANGPTL4					causally		28266623		
-MicrobeToGene	NCBITaxon:239935	Akkermansia muciniphila				CXCL8					causally		28249045		
-MicrobeToGene	NCBITaxon:1579	Lactobacillus acidophilus				BCL10					causally		24130731		
-MicrobeToGene	NCBITaxon:851	Fusobacterium nucleatum				ENO1-IT1					causally		33318144		
-MicrobeToGene	NCBITaxon:47715	Lacticaseibacillus rhamnosus				CLDN1					causally		31732863		
-MicrobeToGene	NCBITaxon:239935	Akkermansia muciniphila				MAPK1					causally		28249045		
-MicrobeToGene	NCBITaxon:1496	Clostridioides difficile				MGAT4A					causally		32066975		
-MicrobeToGene	NCBITaxon:1590	Lactiplantibacillus plantarum				F11R					causally		20412608		
-MicrobeToGene	NCBITaxon:239935	Akkermansia muciniphila				IL12B					causally		30765132		
-MicrobeToGene	NCBITaxon:562	Escherichia coli				SLC19A3					causally		19628653		
-MicrobeToGene	NCBITaxon:239935	Akkermansia muciniphila				TLR4					causally		28249045		
-MicrobeToGene	NCBITaxon:853	Faecalibacterium prausnitzii				TLR6					causally		29112296		
-MicrobeToGene	NCBITaxon:562	Escherichia coli				TGFB1					causally		33902702		
-MicrobeToGene	NCBITaxon:1351	Enterococcus faecalis				CXCL10					causally		19166300		
-MicrobeToGene	NCBITaxon:851	Fusobacterium nucleatum				HK2					causally		33318144		
-MicrobeToGene	NCBITaxon:823	Parabacteroides distasonis				NFKB1					causally		17485456		
-MicrobeToGene	NCBITaxon:1590	Lactiplantibacillus plantarum				JUP					causally		21143932		
-MicrobeToGene	NCBITaxon:1304	Streptococcus salivarius				CXCL8					causally		21602373		
-MicrobeToGene	NCBITaxon:102106	Collinsella				CXCL5					causally		27102666		
-MicrobeToGene	NCBITaxon:165179	Segatella copri				ANGPTL4					causally		28266623		
-MicrobeToGene	NCBITaxon:1579	Lactobacillus acidophilus				CXCL8					causally		24130731		
-MicrobeToGene	NCBITaxon:853	Faecalibacterium prausnitzii				IL10					causally		30765132		
-MicrobeToGene	NCBITaxon:216816	Bifidobacterium longum				CYP7A1					causally		29800811		
-MicrobeToGene	NCBITaxon:817	Bacteroides fragilis				IL10					causally		23828891		
+SnpToPhenotype	rs10842675		12		obesity disorder		0.0189509	1.00E-10					34021172	verified	
+SnpToPhenotype	rs73591955		16		hypercholesterolemia		0.02641853	2.00E-23					39789286	verified	
+SnpToPhenotype	rs9643778		8		obesity disorder		0.0116	3.00E-12					40436827	verified	
+SnpToPhenotype	rs2167750		4		hypercholesterolemia		0.0196	4.00E-21					34594039	verified	
+SnpToPhenotype	rs34591516		8		hypertensive disorder		0.5807	1.00E-09					27618447	verified	
+SnpToPhenotype	rs151193009		1		coronary artery disease		0.447667	1.00E-14					33020668	verified	
+SnpToPhenotype	rs76692773		19		hypercholesterolemia		0.0417	7.00E-20					33462484	verified	
+SnpToPhenotype	rs11332772		3		type 2 diabetes mellitus		1.05	1.00E-10					32499647	verified	
+SnpToPhenotype	rs1051481		19		hypertensive disorder		0.0171535	7.00E-10					39134668	verified	
+SnpToPhenotype	rs67269656		2		hypercholesterolemia		0.010846	2.00E-09					34887591	verified	
+SnpToPhenotype	rs10493544		1		obesity disorder		0.1321	2.00E-11					31504550	verified	
+SnpToPhenotype	rs4241325		2		obesity disorder		0.012719	3.00E-08					37280435	verified	
+SnpToPhenotype	rs12669267		7		obesity disorder			5.00E-09					31669095	verified	
+SnpToPhenotype	rs11045171		12		obesity disorder		0.00814204	1.00E-14					32042192	verified	
+SnpToPhenotype	rs78138914		18		obesity disorder		0.0403	6.00E-29					36581621	verified	
+SnpToPhenotype	rs2971668		7		metabolic syndrome		0.080658	4.00E-10					38201907	verified	
+SnpToPhenotype	rs4286925		8		metabolic syndrome		0.00987226	2.00E-12					39349817	verified	
+SnpToPhenotype	rs147412694		21		hypercholesterolemia		0.0222353	1.00E-15					34887591	verified	
+SnpToPhenotype	rs10733997		10		type 2 diabetes mellitus			1.00E-08					32541925	verified	
+SnpToPhenotype	rs28446899		8		hypertriglyceridemia		0.0365974	5.00E-11					40307439	verified	
+SnpToPhenotype	rs559205936		3		hypertensive disorder			2.00E-08					36768488	verified	
+SnpToPhenotype	rs73066485		7		hypercholesterolemia		0.0295	2.00E-16					30275531	verified	
+SnpToPhenotype	rs12410155		1		obesity disorder			7.00E-12					36137488	verified	
+SnpToPhenotype	rs9594460		13		hypertensive disorder		0.0119	8.00E-09					40436827	verified	
+SnpToPhenotype	rs7247304		19		obesity disorder		0.0289976	2.00E-15					34021172	verified	
+SnpToPhenotype	rs9994887		4		hypercholesterolemia		1.03746	3.00E-09					36329257	verified	
+SnpToPhenotype	rs192042440		16		obesity disorder			1.00E-12					30595370	verified	
+SnpToPhenotype	rs200831171		11		hypertriglyceridemia		1.16205	4.00E-43					34226706	verified	
+SnpToPhenotype	rs6570530		6		hypertensive disorder		0.011976346	3.00E-12					39537608	verified	
+SnpToPhenotype	rs17276464		4		obesity disorder		0.0096	5.00E-09					30239722	verified	
+SnpToPhenotype	rs7977765		12		hypertriglyceridemia		0.01796	7.00E-10					36376304	verified	
+SnpToPhenotype	rs2992649		1		obesity disorder			9.00E-11					31669095	verified	
+SnpToPhenotype	rs1494205		10		obesity disorder		0.0146	1.00E-15					30239722	verified	
+SnpToPhenotype	rs28496545		12		hypercholesterolemia		0.0368659	6.00E-12					34594039	verified	
+SnpToPhenotype	rs11983783		7		hypertensive disorder		0.009944416	1.00E-08					39537608	verified	
+SnpToPhenotype	rs1010		2		coronary artery disease			4.00E-16					35285134	verified	
+SnpToPhenotype	rs4559942		17		hypertriglyceridemia		0.0135489	1.00E-08					32203549	verified	
+SnpToPhenotype	rs2211864		21		obesity disorder		0.0177778	8.00E-09					34021172	verified	
+SnpToPhenotype	rs12676490		8		obesity disorder		0.0253134	2.00E-09					34021172	verified	
+SnpToPhenotype	rs148540016		5		hypertensive disorder			6.00E-09					30595370	verified	
+SnpToPhenotype	rs11643024		16		hyperglycemia		0.0084	8.00E-10					34059833	verified	
+SnpToPhenotype	rs34872471		10		type 2 diabetes mellitus		1.4231888	1.00E-94					29358691	verified	
+SnpToPhenotype	rs764553160		1		obesity disorder		0.0201127	4.00E-11					34021172	verified	
+SnpToPhenotype	rs2266925		7		obesity disorder		0.0202193	1.00E-08					34021172	verified	
+SnpToPhenotype	rs242556		17		obesity disorder		0.0130933	2.00E-08					37280435	verified	
+SnpToPhenotype	rs10861861		12		metabolic syndrome		0.0094164	8.00E-14					39349817	verified	
+SnpToPhenotype	rs7244158		18		hypercholesterolemia		0.0501	2.00E-09					33462484	verified	
+SnpToPhenotype	rs9299254		9		obesity disorder		0.0200066	4.00E-09					40436827	verified	
+SnpToPhenotype	rs73496517		19		hypercholesterolemia		0.0353	7.00E-17					33462484	verified	
+SnpToPhenotype	rs61779284		1		type 2 diabetes mellitus		0.0703	1.00E-48					32541925	verified	
+FoodToNutrient	FDC:1750342	"Apples, granny smith, with skin, raw"		CHEBI:24875	"Iron, Fe"				0.06963	MG				verified	
+FoodToNutrient	FDC:333008	"Cookies, oatmeal, soft, with raisins"		USDA:653	SFA 17:0				0.014	G				verified	
+FoodToNutrient	FDC:334897	"Beef, loin, tenderloin roast, separable lean only, boneless, trimmed to 0"" fat, select, cooked, roasted"		CHEBI:26216	"Potassium, K"				352	MG				verified	
+FoodToNutrient	FDC:746776	"Milk, nonfat, fluid, with added vitamin A and vitamin D (fat free or skim)"		CHEBI:26607	"Fatty acids, total saturated"				0.049	G				verified	
+FoodToNutrient	FDC:331897	"Chicken, broilers or fryers, drumstick, meat only, cooked, braised"		USDA:840	PUFA 20:2 c				0.01	G				verified	
+FoodToNutrient	FDC:1105664	"Apples, granny smith, with skin, raw"		USDA:202	Nitrogen				0.04	G				verified	
+FoodToNutrient	FDC:2261420	"Flour, almond"		CHEBI:16796	"Folate, total"				37.83	UG				verified	
+FoodToNutrient	FDC:330869	"Turkey, ground, 93% lean, 7% fat, pan-broiled crumbles"		USDA:455	"Choline, from sphingomyelin"				8.1	MG				verified	
+FoodToNutrient	FDC:2515379	"Nuts, pistachio nuts, raw"		CHEBI:33252	Ash				2.83	G				verified	
+FoodToNutrient	FDC:2646172	"Beef, ribeye, steak, boneless, choice, raw"		USDA:255	Water				60.63	G				verified	
+FoodToNutrient	FDC:1750337	"Soy milk, unsweetened, plain, shelf stable"		USDA:501	Tryptophan				0.04625	G				verified	
+FoodToNutrient	FDC:2346403	"Potatoes, gold, without skin, raw"		CHEBI:28384	Vitamin K (phylloquinone)				0.8	UG				verified	
+FoodToNutrient	FDC:325198	"Cheese, pasteurized process, American, vitamin D fortified"		CHEBI:26208	"Fatty acids, total polyunsaturated"				1.09	G				verified	
+FoodToNutrient	FDC:1104812	"Flour, rice, brown"		USDA:202	Nitrogen				1.15	G				verified	
+FoodToNutrient	FDC:2346412	"Grapes, red, seedless, raw"		CHEBI:36080	Protein				0.914375	G				verified	
+FoodToNutrient	FDC:333008	"Cookies, oatmeal, soft, with raisins"		USDA:607	SFA 4:0				0.011	G				verified	
+FoodToNutrient	FDC:2346413	"Grapes, green, seedless, raw"		CHEBI:24875	"Iron, Fe"				0.1991	MG				verified	
+FoodToNutrient	FDC:2003602	"Mushroom, maitake"		CHEBI:26948	Thiamin				0.009875	MG				verified	
+FoodToNutrient	FDC:2258591	"Peppers, bell, orange, raw"		CHEBI:29073	"Vitamin C, total ascorbic acid"				158.3	MG				verified	
+FoodToNutrient	FDC:790508	"Butter, stick, salted"		USDA:610	SFA 10:0				1.92	G				verified	
+FoodToNutrient	FDC:334462	"Restaurant, Chinese, sweet and sour pork"		USDA:517	Proline				0.447	G				verified	
+FoodToNutrient	FDC:748967	"Eggs, Grade A, Large, egg whole"		USDA:675	"PUFA 18:2 n-6 c,c"				1.46	G				verified	
+FoodToNutrient	FDC:335240	"Bread, whole-wheat, commercially prepared"		CHEBI:22984	"Calcium, Ca"				163	MG				verified	
+FoodToNutrient	FDC:326135	"Cheese, swiss"		USDA:624	SFA 22:0				0.014	G				verified	
+FoodToNutrient	FDC:327699	"Strawberries, raw"		USDA:255	Water				91.1	G				verified	
+FoodToNutrient	FDC:1104647	"Garlic, raw"		CHEBI:27568	"Selenium, Se"				9.8	UG				verified	
+FoodToNutrient	FDC:326135	"Cheese, swiss"		CHEBI:18291	"Manganese, Mn"				0.027	MG				verified	
+FoodToNutrient	FDC:2257044	"Soy milk, sweetened, plain, refrigerated"		USDA:505	Lysine				0.2	G				verified	
+FoodToNutrient	FDC:748366	"Oil, soybean"		USDA:653	SFA 17:0				0.086	G				verified	
+FoodToNutrient	FDC:747445	"Beans, Dry, Pinto (0% moisture)"		CHEBI:28659	"Phosphorus, P"				507	MG				verified	
+FoodToNutrient	FDC:2684445	"Fish, catfish, farm raised, raw"		USDA:314	"Iodine, I"				1.94	UG				verified	
+FoodToNutrient	FDC:1750351	"Oil, olive, extra light"		USDA:615	SFA 20:0				0.4017	G				verified	
+FoodToNutrient	FDC:335425	"Beans, Dry, Brown (0% moisture)"		USDA:209	Starch				37.2	G				verified	
+FoodToNutrient	FDC:1105430	"Apples, red delicious, with skin, raw"		CHEBI:17015	Riboflavin				0.066	MG				verified	
+FoodToNutrient	FDC:746761	"Beef, round, top round roast, boneless, separable lean only, trimmed to 0"" fat, select, raw"		CHEBI:33234	Vitamin E (alpha-tocopherol)				0.21	MG				verified	
+FoodToNutrient	FDC:1750342	"Apples, granny smith, with skin, raw"		CHEBI:16646	"Carbohydrate, by difference"				14.142975	G				verified	
+FoodToNutrient	FDC:334720	"Restaurant, Latino, pupusas con frijoles (pupusas, bean)"		USDA:501	Tryptophan				0.057	G				verified	
+FoodToNutrient	FDC:2685573	"Cauliflower, raw"		CHEBI:33252	Ash				0.6788	G				verified	
+FoodToNutrient	FDC:1750349	"Oil, sunflower"		USDA:652	SFA 15:0				0.01819	G				verified	
+FoodToNutrient	FDC:2003599	"Mushroom, king oyster"		USDA:	Total Tocopherols				0.8038	MG				verified	
+FoodToNutrient	FDC:322228	"Milk, lowfat, fluid, 1% milkfat, with added vitamin A and vitamin D"		USDA:613	SFA 16:0				0.265	G				verified	
+FoodToNutrient	FDC:2685582	"Tomato, puree, canned"		USDA:211	Glucose				2.06	G				verified	
+FoodToNutrient	FDC:746782	"Milk, whole, 3.25% milkfat, with added vitamin D"		USDA:320	"Vitamin A, RAE"				32	UG				verified	
+FoodToNutrient	FDC:2514745	"Pork, ground, raw"		CHEBI:17855	Total lipid (fat)				17.49	G				verified	
+FoodToNutrient	FDC:322559	"Milk, nonfat, fluid, with added vitamin A and vitamin D (fat free or skim)"		CHEBI:26607	"Fatty acids, total saturated"				0.049	G				verified	
+FoodToNutrient	FDC:329370	"Cheese, mozzarella, low moisture, part-skim"		CHEBI:27306	Vitamin B-6				0.09	MG				verified	
+FoodToNutrient	FDC:322892	"Milk, whole, 3.25% milkfat, with added vitamin D"		USDA:501	Tryptophan				0.043	G				verified	
+FoodToNutrient	FDC:334247	"Sugars, granulated"		CHEBI:18291	"Manganese, Mn"				0.004	MG				verified	
+FoodToNutrient	FDC:746761	"Beef, round, top round roast, boneless, separable lean only, trimmed to 0"" fat, select, raw"		USDA:654	SFA 24:0				0.002	G				verified	
+FoodToNutrient	FDC:2346410	"Raspberries, raw"		USDA:416	Biotin				3.433	UG				verified	
+MicrobeToNutrient	NCBITaxon:28026	Bifidobacterium pseudocatenulatum		CHEBI:28499	Kaempferol						causally	healthy	17439230	verified	
+MicrobeToNutrient	NCBITaxon:292800	Flavonifractor plautii		CHEBI:32980	3-(4-Hydroxyphenyl)propionic acid						causally	healthy	14532034	verified	
+MicrobeToNutrient	NCBITaxon:1502	Clostridium perfringens		CHEBI:17968	Butyrate						causally	healthy	37592891	verified	
+MicrobeToNutrient	NCBITaxon:572511	Blautia		CHEBI:17968	Butyrate						causally	idiopathic inflammatory myopathies	35360108	verified	
+MicrobeToNutrient	NCBITaxon:817	Bacteroides fragilis		CHEBI:5298	Genipin						causally	healthy	22553067	verified	
+MicrobeToNutrient	NCBITaxon:626932	Alistipes indistinctus		CHEBI:28484	Isovaleric acid						causally	healthy	19667375	verified	
+MicrobeToNutrient	NCBITaxon:821	Phocaeicola vulgatus		CHEBI:34741	Equol						causally	colorectal cancer	32218321	verified	
+MicrobeToNutrient	NCBITaxon:673271	Catenibacillus scindens		CHEBI:28197	Daidzein						causally	healthy	20946528	verified	
+MicrobeToNutrient	NCBITaxon:39490	Eubacterium ramulus		CHEBI:41941	"3,4-Dihydroxyphenylacetic acid"						causally	healthy	10648107	verified	
+MicrobeToNutrient	NCBITaxon:1596	Lactobacillus gasseri		CHEBI:17521	Quinic acid						causally	healthy	11412317	verified	
+MicrobeToNutrient	NCBITaxon:29347	[Clostridium] scindens		CHEBI:15740	Formate						causally	healthy	30737348	verified	
+MicrobeToNutrient	NCBITaxon:47678	Bacteroides caccae		CHEBI:17405	4-Pyridoxic acid						causally	healthy	31235863	verified	
+MicrobeToNutrient	NCBITaxon:562	Escherichia coli		CHEBI:18139	Trimethylamine						causally	healthy	34362844	verified	
+MicrobeToNutrient	NCBITaxon:1343173	Enterococcus sp. 45		CHEBI:18152	Myricetin						causally	healthy	24882500	verified	
+MicrobeToNutrient	NCBITaxon:1590	Lactiplantibacillus plantarum		CHEBI:29073	"Vitamin C, total ascorbic acid"						causally	healthy	36564415	verified	
+MicrobeToNutrient	NCBITaxon:1678	Bifidobacterium		CHEBI:15740	Formate						causally	healthy	37592891	verified	
+MicrobeToNutrient	NCBITaxon:39490	Eubacterium ramulus		CHEBI:50202	"5,7-Dihydroxy-2-(4-hydroxyphenyl)chroman-4-one"						causally	healthy	15466559	verified	
+MicrobeToNutrient	NCBITaxon:292800	Flavonifractor plautii		CHEBI:41941	"3,4-Dihydroxyphenylacetic acid"						causally	healthy	14532034	verified	
+MicrobeToNutrient	NCBITaxon:216816	Bifidobacterium longum		CHEBI:67988	Ginsenoside Rd						causally	healthy	22466563	verified	
+MicrobeToNutrient	NCBITaxon:1485	Clostridium		CHEBI:30763	4-Hydroxybenzoic acid						causally	healthy	36076453	verified	
+MicrobeToNutrient	NCBITaxon:1509	Clostridium sporogenes		CHEBI:24813	Indole-3-lactic acid						causally	healthy	33076930	verified	
+MicrobeToNutrient	NCBITaxon:33882	Microbacterium		CHEBI:17405	4-Pyridoxic acid						causally	healthy	31235863	verified	
+MicrobeToNutrient	NCBITaxon:1449386	bacterium MRG-IFC-1		CHEBI:28197	Daidzein						causally	healthy	25199800	verified	
+MicrobeToNutrient	NCBITaxon:1266601	Bacillus sp. 46		CHEBI:68352	Isoquercetin						causally	healthy	24463398	verified	
+MicrobeToNutrient	NCBITaxon:853	Faecalibacterium prausnitzii		CHEBI:47952	D-Glucuronic Acid						causally	colitis	25900655	verified	
+MicrobeToNutrient	NCBITaxon:29347	[Clostridium] scindens		CHEBI:30089	Acetate						causally	healthy	30737348	verified	
+MicrobeToNutrient	NCBITaxon:33945	Enterococcus avium		CHEBI:17558	Quercitrin						causally	healthy	26505733	verified	
+MicrobeToNutrient	NCBITaxon:673271	Catenibacillus scindens		CHEBI:32980	3-(4-Hydroxyphenyl)propionic acid						causally	healthy	20946528	verified	
+MicrobeToNutrient	NCBITaxon:39488	Anaerobutyricum hallii		CHEBI:17968	Butyrate						causally	healthy	28894218	verified	
+MicrobeToNutrient	NCBITaxon:239934	Akkermansia		CHEBI:17687	Glycocholic acid						causally	healthy	31235863	verified	
+MicrobeToNutrient	NCBITaxon:562	Escherichia coli		CHEBI:17521	Quinic acid						causally	healthy	11412317	verified	
+MicrobeToNutrient	NCBITaxon:29347	[Clostridium] scindens		CHEBI:28834	Deoxycholic Acid						causally	healthy	23836456	verified	
+MicrobeToNutrient	NCBITaxon:1680	Bifidobacterium adolescentis		CHEBI:28499	Kaempferol						causally	healthy	17439230	verified	
+MicrobeToNutrient	NCBITaxon:1686	Bifidobacterium catenulatum		CHEBI:28197	Daidzein						causally	healthy	17439230	verified	
+MicrobeToNutrient	NCBITaxon:37734	Enterococcus casseliflavus		CHEBI:16651	L-lactate						causally	healthy	9914304	verified	
+MicrobeToNutrient	NCBITaxon:1351	Enterococcus faecalis		CHEBI:67246	Lariciresinol						causally	healthy	16765860	verified	
+MicrobeToNutrient	NCBITaxon:626938	Succinatimonas hippei		CHEBI:30031	Succinate						causally	healthy	19749029	verified	
+MicrobeToNutrient	NCBITaxon:1509	Clostridium sporogenes		CHEBI:15729	L-ornithine						causally	healthy	36070752	verified	
+MicrobeToNutrient	NCBITaxon:4932	Saccharomyces cerevisiae		CHEBI:16236	Ethanol						causally	healthy	26858714	verified	
+MicrobeToNutrient	NCBITaxon:186803	Lachnospiraceae		CHEBI:43580	3-Indolepropionic acid						causally	healthy	31030641	verified	
+MicrobeToNutrient	NCBITaxon:142586	Eubacterium sp.		CHEBI:81556	Enterodiol						causally	healthy	16765860	verified	
+MicrobeToNutrient	NCBITaxon:39490	Eubacterium ramulus		CHEBI:32980	3-(4-Hydroxyphenyl)propionic acid						causally	healthy	10648107	verified	
+MicrobeToNutrient	NCBITaxon:1926307	Veillonella sp.		CHEBI:34741	Equol						causally	healthy	19580283	verified	
+MicrobeToNutrient	NCBITaxon:28116	Bacteroides ovatus		CHEBI:16243	Quercetin						causally	healthy	19580283	verified	
+MicrobeToNutrient	NCBITaxon:68766	Fusobacterium sp.		CHEBI:16136	Hydrogen Sulfide						causally	Functional dyspepsia	36167662	verified	
+MicrobeToNutrient	NCBITaxon:745368	Gemmiger formicilis		CHEBI:17968	Butyrate						causally	healthy	36771360	verified	
+MicrobeToNutrient	NCBITaxon:544645	Butyricimonas virosa		CHEBI:16135	Isobutyric acid						causally	healthy	19542124	verified	
+MicrobeToNutrient	NCBITaxon:1485	Clostridium		CHEBI:15361	Pyruvate						causally	healthy	22325238	verified	
+MicrobeToNutrient	NCBITaxon:820	Bacteroides uniformis		CHEBI:34741	Equol						causally	colorectal cancer	32218321	verified	
+MicrobeToNutrient	NCBITaxon:1338	Streptococcus intermedius		CHEBI:34741	Equol						causally	healthy	19580283	verified	
+MicrobeToGene	NCBITaxon:1590	Lactiplantibacillus plantarum				HNF4A					causally		21143932	verified	
+MicrobeToGene	NCBITaxon:562	Escherichia coli				OCLN					causally		31315566	verified	
+MicrobeToGene	NCBITaxon:47715	Lacticaseibacillus rhamnosus				TJP1					causally		31732863	verified	
+MicrobeToGene	NCBITaxon:33038	Mediterraneibacter gnavus				MUC2					causally		26868655	verified	
+MicrobeToGene	NCBITaxon:1590	Lactiplantibacillus plantarum				CNKSR3					causally		21143932	verified	
+MicrobeToGene	NCBITaxon:1597	Lacticaseibacillus paracasei				IL18					causally		30767231	verified	
+MicrobeToGene	NCBITaxon:1590	Lactiplantibacillus plantarum				IFNG					causally		18077037	verified	
+MicrobeToGene	NCBITaxon:1304	Streptococcus salivarius				NFKB1					causally		17485456	verified	
+MicrobeToGene	NCBITaxon:1304	Streptococcus salivarius				FABP2					causally		25946041	verified	
+MicrobeToGene	NCBITaxon:853	Faecalibacterium prausnitzii				FOXP3					causally		23643066	verified	
+MicrobeToGene	NCBITaxon:823	Parabacteroides distasonis				CXCL8					causally		17485456	verified	
+MicrobeToGene	NCBITaxon:328812	Parabacteroides goldsteinii				MYD88					causally		36585238	verified	
+MicrobeToGene	NCBITaxon:1351	Enterococcus faecalis				IL10					causally		18234854	verified	
+MicrobeToGene	NCBITaxon:851	Fusobacterium nucleatum				LDHA					causally		33318144	verified	
+MicrobeToGene	NCBITaxon:1579	Lactobacillus acidophilus				SLC9A3					causally		23086913	verified	
+MicrobeToGene	NCBITaxon:47715	Lacticaseibacillus rhamnosus				OCLN					causally		31732863	verified	
+MicrobeToGene	NCBITaxon:239935	Akkermansia muciniphila				IL6					causally		28249045	verified	
+MicrobeToGene	NCBITaxon:1590	Lactiplantibacillus plantarum				CLDN1					causally		20412608	verified	
+MicrobeToGene	NCBITaxon:1597	Lacticaseibacillus paracasei				IL4					causally		30767231	verified	
+MicrobeToGene	NCBITaxon:1689	Bifidobacterium dentium				Htr1a					causally		32795610	verified	
+MicrobeToGene	NCBITaxon:239935	Akkermansia muciniphila				IL10					causally		30765132	verified	
+MicrobeToGene	NCBITaxon:1590	Lactiplantibacillus plantarum				ACTB					causally		21143932	verified	
+MicrobeToGene	NCBITaxon:1351	Enterococcus faecalis				PLIN2					causally		18234854	verified	
+MicrobeToGene	NCBITaxon:853	Faecalibacterium prausnitzii				HDAC3					causally		30809639	verified	
+MicrobeToGene	NCBITaxon:853	Faecalibacterium prausnitzii				TLR2					causally		29112296	verified	
+MicrobeToGene	NCBITaxon:53345	Enterococcus durans				IL6					causally		28239378	verified	
+MicrobeToGene	NCBITaxon:1382	Lancefieldella parvula				ANGPTL4					causally		28266623	verified	
+MicrobeToGene	NCBITaxon:239935	Akkermansia muciniphila				CXCL8					causally		28249045	verified	
+MicrobeToGene	NCBITaxon:1579	Lactobacillus acidophilus				BCL10					causally		24130731	verified	
+MicrobeToGene	NCBITaxon:851	Fusobacterium nucleatum				ENO1-IT1					causally		33318144	verified	
+MicrobeToGene	NCBITaxon:47715	Lacticaseibacillus rhamnosus				CLDN1					causally		31732863	verified	
+MicrobeToGene	NCBITaxon:239935	Akkermansia muciniphila				MAPK1					causally		28249045	verified	
+MicrobeToGene	NCBITaxon:1496	Clostridioides difficile				MGAT4A					causally		32066975	verified	
+MicrobeToGene	NCBITaxon:1590	Lactiplantibacillus plantarum				F11R					causally		20412608	verified	
+MicrobeToGene	NCBITaxon:239935	Akkermansia muciniphila				IL12B					causally		30765132	verified	
+MicrobeToGene	NCBITaxon:562	Escherichia coli				SLC19A3					causally		19628653	verified	
+MicrobeToGene	NCBITaxon:239935	Akkermansia muciniphila				TLR4					causally		28249045	verified	
+MicrobeToGene	NCBITaxon:853	Faecalibacterium prausnitzii				TLR6					causally		29112296	verified	
+MicrobeToGene	NCBITaxon:562	Escherichia coli				TGFB1					causally		33902702	verified	
+MicrobeToGene	NCBITaxon:1351	Enterococcus faecalis				CXCL10					causally		19166300	verified	
+MicrobeToGene	NCBITaxon:851	Fusobacterium nucleatum				HK2					causally		33318144	verified	
+MicrobeToGene	NCBITaxon:823	Parabacteroides distasonis				NFKB1					causally		17485456	verified	
+MicrobeToGene	NCBITaxon:1590	Lactiplantibacillus plantarum				JUP					causally		21143932	verified	
+MicrobeToGene	NCBITaxon:1304	Streptococcus salivarius				CXCL8					causally		21602373	verified	
+MicrobeToGene	NCBITaxon:102106	Collinsella				CXCL5					causally		27102666	verified	
+MicrobeToGene	NCBITaxon:165179	Segatella copri				ANGPTL4					causally		28266623	verified	
+MicrobeToGene	NCBITaxon:1579	Lactobacillus acidophilus				CXCL8					causally		24130731	verified	
+MicrobeToGene	NCBITaxon:853	Faecalibacterium prausnitzii				IL10					causally		30765132	verified	
+MicrobeToGene	NCBITaxon:216816	Bifidobacterium longum				CYP7A1					causally		29800811	verified	
+MicrobeToGene	NCBITaxon:817	Bacteroides fragilis				IL10					causally		23828891	verified	
