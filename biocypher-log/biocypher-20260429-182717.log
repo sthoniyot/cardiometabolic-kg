@@ -1,130 +1,130 @@
-2026-04-28 23:53:50,782	INFO	module:_logger
+2026-04-29 18:27:17,539	INFO	module:_logger
 This is BioCypher v0.8.0.
-2026-04-28 23:53:50,782	INFO	module:_logger
-Logging into `biocypher-log/biocypher-20260428-235350.log`.
-2026-04-28 23:53:50,782	DEBUG	module:_create
+2026-04-29 18:27:17,539	INFO	module:_logger
+Logging into `biocypher-log/biocypher-20260429-182717.log`.
+2026-04-29 18:27:17,539	DEBUG	module:_create
 Loading module biocypher._create.
-2026-04-28 23:53:50,783	DEBUG	module:_deduplicate
+2026-04-29 18:27:17,540	DEBUG	module:_deduplicate
 Loading module biocypher._deduplicate.
-2026-04-28 23:53:51,019	DEBUG	module:_misc
+2026-04-29 18:27:17,740	DEBUG	module:_misc
 Loading module biocypher._misc.
-2026-04-28 23:53:51,019	DEBUG	module:_get
+2026-04-29 18:27:17,741	DEBUG	module:_get
 Loading module biocypher._get.
-2026-04-28 23:53:51,020	DEBUG	module:_mapping
+2026-04-29 18:27:17,741	DEBUG	module:_mapping
 Loading module biocypher._mapping.
-2026-04-28 23:53:51,055	DEBUG	module:_ontology
+2026-04-29 18:27:17,776	DEBUG	module:_ontology
 Loading module biocypher._ontology.
-2026-04-28 23:53:51,058	DEBUG	module:_translate
+2026-04-29 18:27:17,779	DEBUG	module:_translate
 Loading module biocypher._translate.
-2026-04-28 23:53:51,579	DEBUG	module:_neo4j_driver
+2026-04-29 18:27:18,105	DEBUG	module:_neo4j_driver
 Loading module biocypher.output.connect._neo4j_driver.
-2026-04-28 23:53:51,579	DEBUG	module:_get_connector
+2026-04-29 18:27:18,105	DEBUG	module:_get_connector
 Loading module biocypher.output.connect._get_connector.
-2026-04-28 23:53:51,581	DEBUG	module:_get_in_memory_kg
+2026-04-29 18:27:18,108	DEBUG	module:_get_in_memory_kg
 Loading module biocypher.output.in_memory._get_in_memory_kg.
-2026-04-28 23:53:51,585	DEBUG	module:_get_writer
+2026-04-29 18:27:18,113	DEBUG	module:_get_writer
 Loading module biocypher.output.write._get_writer.
-2026-04-28 23:53:51,585	DEBUG	module:_core
+2026-04-29 18:27:18,113	DEBUG	module:_core
 Loading module biocypher._core.
-2026-04-28 23:53:51,586	INFO	module:_core
+2026-04-29 18:27:18,115	INFO	module:_core
 Running BioCypher with schema configuration from config/schema_config.yaml.
-2026-04-28 23:53:58,404	INFO	module:_ontology
+2026-04-29 18:27:25,683	INFO	module:_ontology
 Loading ontologies...
-2026-04-28 23:53:58,404	INFO	module:_ontology
+2026-04-29 18:27:25,683	INFO	module:_ontology
 Instantiating OntologyAdapter class for https://github.com/biolink/biolink-model/raw/v3.6.0/biolink-model.owl.ttl.
-2026-04-28 23:54:00,503	INFO	module:_writer
+2026-04-29 18:27:28,242	INFO	module:_writer
 Creating output directory `/home/sthoniyot/projects/cardiometabolic-kg/data/processed/biocypher-out`.
-2026-04-28 23:54:00,504	DEBUG	module:_batch_writer
+2026-04-29 18:27:28,252	DEBUG	module:_batch_writer
 Writing node CSV from generator.
-2026-04-28 23:54:00,504	DEBUG	module:_translate
+2026-04-29 18:27:28,252	DEBUG	module:_translate
 Translating nodes to BioCypher
-2026-04-28 23:54:00,743	DEBUG	module:_translate
+2026-04-29 18:27:28,491	DEBUG	module:_translate
 Finished translating nodes to BioCypher.
-2026-04-28 23:54:00,815	INFO	module:_batch_writer
+2026-04-29 18:27:28,576	INFO	module:_batch_writer
 Writing 47718 entries to Snp-part000.csv
-2026-04-28 23:54:00,829	INFO	module:_batch_writer
+2026-04-29 18:27:28,589	INFO	module:_batch_writer
 Writing 6322 entries to Gene-part000.csv
-2026-04-28 23:54:00,829	INFO	module:_batch_writer
+2026-04-29 18:27:28,590	INFO	module:_batch_writer
 Writing 11 entries to Phenotype-part000.csv
-2026-04-28 23:54:00,835	WARNING	module:_writer
+2026-04-29 18:27:28,596	WARNING	module:_writer
 Output directory `/home/sthoniyot/projects/cardiometabolic-kg/data/processed/biocypher-out` already exists. If this is not planned, file consistency may be compromised.
-2026-04-28 23:54:00,835	DEBUG	module:_batch_writer
+2026-04-29 18:27:28,596	DEBUG	module:_batch_writer
 Writing node CSV from generator.
-2026-04-28 23:54:00,835	DEBUG	module:_translate
+2026-04-29 18:27:28,596	DEBUG	module:_translate
 Translating nodes to BioCypher
-2026-04-28 23:54:00,837	DEBUG	module:_translate
+2026-04-29 18:27:28,598	DEBUG	module:_translate
 Finished translating nodes to BioCypher.
-2026-04-28 23:54:00,838	INFO	module:_batch_writer
+2026-04-29 18:27:28,598	INFO	module:_batch_writer
 Writing 358 entries to Food-part000.csv
-2026-04-28 23:54:00,839	INFO	module:_batch_writer
+2026-04-29 18:27:28,599	INFO	module:_batch_writer
 Writing 460 entries to Nutrient-part000.csv
-2026-04-28 23:54:00,839	WARNING	module:_writer
+2026-04-29 18:27:28,600	WARNING	module:_writer
 Output directory `/home/sthoniyot/projects/cardiometabolic-kg/data/processed/biocypher-out` already exists. If this is not planned, file consistency may be compromised.
-2026-04-28 23:54:00,839	DEBUG	module:_batch_writer
+2026-04-29 18:27:28,600	DEBUG	module:_batch_writer
 Writing node CSV from generator.
-2026-04-28 23:54:00,839	DEBUG	module:_translate
+2026-04-29 18:27:28,600	DEBUG	module:_translate
 Translating nodes to BioCypher
-2026-04-28 23:54:00,840	WARNING	module:_deduplicate
+2026-04-29 18:27:28,601	WARNING	module:_deduplicate
 Duplicate node type nutrient found. 
-2026-04-28 23:54:00,840	WARNING	module:_deduplicate
+2026-04-29 18:27:28,601	WARNING	module:_deduplicate
 Duplicate node type gene found. 
-2026-04-28 23:54:00,840	DEBUG	module:_translate
+2026-04-29 18:27:28,601	DEBUG	module:_translate
 Finished translating nodes to BioCypher.
-2026-04-28 23:54:00,841	INFO	module:_batch_writer
+2026-04-29 18:27:28,601	INFO	module:_batch_writer
 Writing 192 entries to Microbe-part000.csv
-2026-04-28 23:54:00,842	INFO	module:_batch_writer
+2026-04-29 18:27:28,602	INFO	module:_batch_writer
 Writing 126 entries to Nutrient-part001.csv
-2026-04-28 23:54:00,842	INFO	module:_batch_writer
+2026-04-29 18:27:28,602	INFO	module:_batch_writer
 Writing 76 entries to Gene-part001.csv
-2026-04-28 23:54:00,842	WARNING	module:_neo4j
+2026-04-29 18:27:28,602	WARNING	module:_neo4j
 Header file `/home/sthoniyot/projects/cardiometabolic-kg/data/processed/biocypher-out/Nutrient-header.csv` already exists. Overwriting.
-2026-04-28 23:54:00,842	WARNING	module:_neo4j
+2026-04-29 18:27:28,610	WARNING	module:_neo4j
 Header file `/home/sthoniyot/projects/cardiometabolic-kg/data/processed/biocypher-out/Gene-header.csv` already exists. Overwriting.
-2026-04-28 23:54:00,842	DEBUG	module:_translate
+2026-04-29 18:27:28,610	DEBUG	module:_translate
 Translating edges to BioCypher
-2026-04-28 23:54:01,053	DEBUG	module:_translate
+2026-04-29 18:27:28,840	DEBUG	module:_translate
 Finished translating edges to BioCypher.
-2026-04-28 23:54:01,069	DEBUG	module:_batch_writer
+2026-04-29 18:27:28,860	DEBUG	module:_batch_writer
 Writing edge CSV from generator.
-2026-04-28 23:54:01,117	INFO	module:_batch_writer
+2026-04-29 18:27:28,921	INFO	module:_batch_writer
 Writing 16997 entries to SnpToGene-part000.csv
-2026-04-28 23:54:01,272	INFO	module:_batch_writer
+2026-04-29 18:27:29,093	INFO	module:_batch_writer
 Writing 54223 entries to SnpToPhenotype-part000.csv
-2026-04-28 23:54:01,287	DEBUG	module:_translate
+2026-04-29 18:27:29,108	DEBUG	module:_translate
 Translating edges to BioCypher
-2026-04-28 23:54:01,314	DEBUG	module:_translate
+2026-04-29 18:27:29,135	DEBUG	module:_translate
 Finished translating edges to BioCypher.
-2026-04-28 23:54:01,317	DEBUG	module:_batch_writer
+2026-04-29 18:27:29,138	DEBUG	module:_batch_writer
 Writing edge CSV from generator.
-2026-04-28 23:54:01,352	INFO	module:_batch_writer
+2026-04-29 18:27:29,173	INFO	module:_batch_writer
 Writing 13523 entries to FoodToNutrient-part000.csv
-2026-04-28 23:54:01,353	WARNING	module:_neo4j
+2026-04-29 18:27:29,174	WARNING	module:_neo4j
 File /home/sthoniyot/projects/cardiometabolic-kg/data/processed/biocypher-out/SnpToGene-header.csv already exists. Overwriting.
-2026-04-28 23:54:01,353	WARNING	module:_neo4j
+2026-04-29 18:27:29,174	WARNING	module:_neo4j
 File /home/sthoniyot/projects/cardiometabolic-kg/data/processed/biocypher-out/SnpToPhenotype-header.csv already exists. Overwriting.
-2026-04-28 23:54:01,354	DEBUG	module:_translate
+2026-04-29 18:27:29,176	DEBUG	module:_translate
 Translating edges to BioCypher
-2026-04-28 23:54:01,356	DEBUG	module:_translate
+2026-04-29 18:27:29,178	DEBUG	module:_translate
 Finished translating edges to BioCypher.
-2026-04-28 23:54:01,356	DEBUG	module:_batch_writer
+2026-04-29 18:27:29,178	DEBUG	module:_batch_writer
 Writing edge CSV from generator.
-2026-04-28 23:54:01,357	INFO	module:_batch_writer
+2026-04-29 18:27:29,180	INFO	module:_batch_writer
 Writing 378 entries to MicrobeToNutrient-part000.csv
-2026-04-28 23:54:01,358	INFO	module:_batch_writer
+2026-04-29 18:27:29,180	INFO	module:_batch_writer
 Writing 182 entries to MicrobeToGene-part000.csv
-2026-04-28 23:54:01,358	INFO	module:_batch_writer
+2026-04-29 18:27:29,181	INFO	module:_batch_writer
 Writing 5 entries to MicrobeToPhenotype-part000.csv
-2026-04-28 23:54:01,358	WARNING	module:_neo4j
+2026-04-29 18:27:29,181	WARNING	module:_neo4j
 File /home/sthoniyot/projects/cardiometabolic-kg/data/processed/biocypher-out/SnpToGene-header.csv already exists. Overwriting.
-2026-04-28 23:54:01,360	WARNING	module:_neo4j
+2026-04-29 18:27:29,181	WARNING	module:_neo4j
 File /home/sthoniyot/projects/cardiometabolic-kg/data/processed/biocypher-out/SnpToPhenotype-header.csv already exists. Overwriting.
-2026-04-28 23:54:01,360	WARNING	module:_neo4j
+2026-04-29 18:27:29,181	WARNING	module:_neo4j
 File /home/sthoniyot/projects/cardiometabolic-kg/data/processed/biocypher-out/FoodToNutrient-header.csv already exists. Overwriting.
-2026-04-28 23:54:01,361	INFO	module:_batch_writer
+2026-04-29 18:27:29,181	INFO	module:_batch_writer
 Writing neo4j import call to `/home/sthoniyot/projects/cardiometabolic-kg/data/processed/biocypher-out/neo4j-admin-import-call.sh`.
-2026-04-28 23:54:01,361	INFO	module:_ontology
+2026-04-29 18:27:29,181	INFO	module:_ontology
 Showing ontology structure based on https://github.com/biolink/biolink-model/raw/v3.6.0/biolink-model.owl.ttl
-2026-04-28 23:54:01,362	INFO	module:_ontology
+2026-04-29 18:27:29,182	INFO	module:_ontology
 
 entity
 ├── association
@@ -159,45 +159,45 @@ entity
     └── organism taxon
         └── microbe
 
-2026-04-28 23:54:01,362	INFO	module:_core
+2026-04-29 18:27:29,182	INFO	module:_core
 Duplicate node types encountered (IDs in log): 
-    nutrient
     gene
+    nutrient
 
-2026-04-28 23:54:01,362	DEBUG	module:_core
+2026-04-29 18:27:29,182	DEBUG	module:_core
 Duplicate node IDs encountered: 
-    HGNC:ITCH
-    HGNC:PLIN2
-    HGNC:ACTB
-    HGNC:RELA
-    HGNC:CCR6
-    HGNC:SLC26A3
-    HGNC:HNF4A
-    HGNC:TLR4
-    HGNC:LEP
-    HGNC:ANGPTL4
-    HGNC:RORA
-    HGNC:CXCL8
-    CHEBI:29073
-    HGNC:CYP7A1
-    HGNC:PGP
-    HGNC:HCAR2
-    HGNC:ST6GAL1
-    HGNC:PRKCZ
-    HGNC:CGN
-    HGNC:CD2AP
-    HGNC:PPARG
     CHEBI:22868
-    HGNC:TGFB1
-    HGNC:MAPK14
-    HGNC:GLP1R
+    HGNC:TLR4
+    HGNC:CYP7A1
+    HGNC:PRKCZ
+    HGNC:PLIN2
     HGNC:VEGFA
-    HGNC:CDKN1A
-    HGNC:TAB2
+    HGNC:ANGPTL4
+    HGNC:RELA
+    HGNC:ACTB
+    HGNC:HCAR2
+    HGNC:RORA
+    HGNC:GLP1R
     HGNC:CLGN
     HGNC:TNF
+    HGNC:CCR6
+    HGNC:CD2AP
+    HGNC:TGFB1
+    HGNC:SLC26A3
+    CHEBI:29073
+    HGNC:CXCL8
+    HGNC:PPARG
+    HGNC:ST6GAL1
+    HGNC:PGP
+    HGNC:CDKN1A
+    HGNC:CGN
+    HGNC:MAPK14
+    HGNC:HNF4A
+    HGNC:ITCH
+    HGNC:LEP
+    HGNC:TAB2
 
-2026-04-28 23:54:01,362	INFO	module:_core
+2026-04-29 18:27:29,182	INFO	module:_core
 No duplicate edges in input.
-2026-04-28 23:54:01,362	INFO	module:_core
+2026-04-29 18:27:29,182	INFO	module:_core
 No missing labels in input.

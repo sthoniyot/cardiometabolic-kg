@@ -1,4 +1,4 @@
-**Table 5.** Released artefacts. Sizes are approximate at v1.0.0 and may
+**Table 2.** Released artefacts. Sizes are approximate at v1.0.0 and may
 change in subsequent releases.
 
 | Artefact | Format | Size | Location | Purpose |

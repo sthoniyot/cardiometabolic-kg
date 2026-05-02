@@ -6,8 +6,7 @@ https://github.com/sthoniyot/cardiometabolic-kg containing source code,
 schema configuration, and pipeline scripts; and a Zenodo deposit at
 https://doi.org/10.5281/zenodo.PLACEHOLDER containing the pre-built
 knowledge graph artefacts that are too large to commit to a Git history
-(Table 5). The two are linked: the Zenodo deposit is automatically created
-on each tagged GitHub release, ensuring that every released graph version
+(Table 2). The two are linked: each tagged GitHub release is deposited to Zenodo, ensuring that every released graph version
 is associated with both a Git tag and a persistent DOI.
 
 ### 3.1 Pre-built knowledge graph (Zenodo)
