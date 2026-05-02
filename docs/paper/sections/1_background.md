@@ -50,5 +50,5 @@ carrying cardiometabolic GWAS variants surfaces *Streptococcus salivarius* and
 cardiometabolic GWAS variants spanning seven phenotypes (Figure 3) — a tri-layer
 hypothesis pattern that, to our knowledge, no existing public KG has previously made
 queryable. The remainder of this paper describes the data sources and integration
-methodology (§2), the released artifacts (§3), data quality assessment and competency
-evaluation (§4), and example use-cases (§5).
+the methodology (§3), the released artifacts (§4), data quality assessment and competency
+evaluation (§5), and the broader implications (§6).

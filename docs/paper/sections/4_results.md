@@ -14,7 +14,7 @@ linked to 586 nutrients via 13,523 composition edges. Cross-source
 overlap — i.e. nutrient nodes shared between USDA and gutMGene, or gene
 nodes shared between GWAS Catalog and gutMGene — is non-trivial and
 explicitly preserved by the build pipeline (76 shared genes, 126 shared
-nutrient nodes), enabling the cross-layer queries described in §4.3.
+nutrient nodes), enabling the cross-layer queries described in §5.3.
 
 Provenance coverage is complete on all literature-derived edge types: 100%
 of the 54,223 SnpToPhenotype edges, 100% of the 378 MicrobeToNutrient

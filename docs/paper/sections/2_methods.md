@@ -59,7 +59,7 @@ adopted by Monarch Initiative, PrimeKG, and the NCATS Biomedical Data
 Translator programme; alignment provides immediate interoperability with
 those resources and a stable, versioned classification of node and edge
 types. We chose Biolink v3.6.0 specifically because it is the version
-shipped by BioCypher v0.8.0 (the build framework, see §2.4) and avoids
+shipped by BioCypher v0.8.0 (the build framework, see §3.4) and avoids
 unstable integration with the still-evolving Biolink v4.x.
 
 #### 3.2.2 Node types
@@ -102,7 +102,7 @@ are silently dropped at CSV write time (logged at INFO level rather than
 as a warning). During development, this caused the PMID property of
 MicrobeToNutrient and MicrobeToGene edges to be lost between adapter
 output and the Neo4j-loaded graph; the issue was identified during the
-manual audit (§4.3) when inspection of edge property keys in Neo4j
+manual audit (§5.3) when inspection of edge property keys in Neo4j
 showed only `id` and `evidence_tier`. We resolved the issue by
 explicitly declaring `pmid` (and, for MicrobeToNutrient, `condition`) in
 the schema; we recommend explicit enumeration of all retained properties

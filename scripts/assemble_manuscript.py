@@ -113,7 +113,7 @@ The author(s) declare no competing interests.
 ## Data availability
 
 All data, code, and pre-built knowledge-graph artefacts are publicly
-available under CC-BY-4.0; see §3 Data Records and §7 Code Availability for
+available under CC-BY-4.0; see §4 Data Records and §8 Code Availability for
 URLs and DOIs.
 
 ## References

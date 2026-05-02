@@ -75,8 +75,8 @@ carrying cardiometabolic GWAS variants surfaces *Streptococcus salivarius* and
 cardiometabolic GWAS variants spanning seven phenotypes (Figure 3) — a tri-layer
 hypothesis pattern that, to our knowledge, no existing public KG has previously made
 queryable. The remainder of this paper describes the data sources and integration
-methodology (§2), the released artifacts (§3), data quality assessment and competency
-evaluation (§4), and example use-cases (§5).
+the methodology (§3), the released artifacts (§4), data quality assessment and competency
+evaluation (§5), and the broader implications (§6).
 
 ## 2 Literature Review
 
@@ -243,7 +243,7 @@ adopted by Monarch Initiative, PrimeKG, and the NCATS Biomedical Data
 Translator programme; alignment provides immediate interoperability with
 those resources and a stable, versioned classification of node and edge
 types. We chose Biolink v3.6.0 specifically because it is the version
-shipped by BioCypher v0.8.0 (the build framework, see §2.4) and avoids
+shipped by BioCypher v0.8.0 (the build framework, see §3.4) and avoids
 unstable integration with the still-evolving Biolink v4.x.
 
 #### 3.2.2 Node types
@@ -286,7 +286,7 @@ are silently dropped at CSV write time (logged at INFO level rather than
 as a warning). During development, this caused the PMID property of
 MicrobeToNutrient and MicrobeToGene edges to be lost between adapter
 output and the Neo4j-loaded graph; the issue was identified during the
-manual audit (§4.3) when inspection of edge property keys in Neo4j
+manual audit (§5.3) when inspection of edge property keys in Neo4j
 showed only `id` and `evidence_tier`. We resolved the issue by
 explicitly declaring `pmid` (and, for MicrobeToNutrient, `condition`) in
 the schema; we recommend explicit enumeration of all retained properties
@@ -463,7 +463,7 @@ linked to 586 nutrients via 13,523 composition edges. Cross-source
 overlap — i.e. nutrient nodes shared between USDA and gutMGene, or gene
 nodes shared between GWAS Catalog and gutMGene — is non-trivial and
 explicitly preserved by the build pipeline (76 shared genes, 126 shared
-nutrient nodes), enabling the cross-layer queries described in §4.3.
+nutrient nodes), enabling the cross-layer queries described in §5.3.
 
 Provenance coverage is complete on all literature-derived edge types: 100%
 of the 54,223 SnpToPhenotype edges, 100% of the 378 MicrobeToNutrient
@@ -787,7 +787,7 @@ The author(s) declare no competing interests.
 ## Data availability
 
 All data, code, and pre-built knowledge-graph artefacts are publicly
-available under CC-BY-4.0; see §3 Data Records and §7 Code Availability for
+available under CC-BY-4.0; see §4 Data Records and §8 Code Availability for
 URLs and DOIs.
 
 ## References
