@@ -29,11 +29,11 @@ OUT_DOCX = PAPER_DIR / "manuscript.docx"
 FRONT_MATTER = """\
 # NuGeMi-KG: A FAIR tri-layer knowledge graph integrating nutrigenetics, gut microbiome, and food chemistry for cardiometabolic precision nutrition
 
-**[Sharath Thoniyot]**¹, **[Vijayakumar Balakrishnan]**¹
+**Sharath Thoniyot**¹, **Vijayakumar Balakrishnan**¹
 
-¹ [Department of Computer Science, Birla Institute of Technology and Science, Pilani], [Dubai, United Arab Emirates]
+¹ Department of Computer Science, Birla Institute of Technology and Science Pilani, Dubai Campus, United Arab Emirates
 
-**Corresponding author:** [Sharath Thoniyot] (p20230010@dubai.bits-pilani.ac.in)
+**Corresponding author:** Sharath Thoniyot (p20230010@dubai.bits-pilani.ac.in)
 
 ---
 
@@ -102,9 +102,9 @@ framework.
 
 ## Author contributions
 
-**[Sharath Thoniyot]**: conceptualisation, data curation, software, formal analysis,
+**S.T.**: conceptualisation, data curation, software, formal analysis,
 visualisation, writing — original draft, writing — review and editing.
-[Add additional contributors with CRediT roles as applicable.]
+**V.B.**: supervision, conceptualisation, writing — review and editing.
 
 ## Competing interests
 
