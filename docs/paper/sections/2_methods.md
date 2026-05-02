@@ -42,7 +42,7 @@ the *food.csv*, *nutrient.csv*, and *food_nutrient.csv* tables we loaded
 all rows with `data_type == "foundation_food"`. To enable cross-layer
 joins between USDA nutrient identifiers (numeric `nutrient_nbr`) and
 ChEBI identifiers used elsewhere in the KG, we built a hand-curated
-mapping for approximately thirty nutrients of cardiometabolic interest
+mapping for approximately forty nutrients of cardiometabolic interest
 (macronutrients 203/204/205, fibre 291, minerals 301–317, vitamins
 318–430, omega-3 species 851/858/875), with the remaining nutrients
 falling back to a USDA-prefixed pseudo-CHEBI namespace. After filtering,
