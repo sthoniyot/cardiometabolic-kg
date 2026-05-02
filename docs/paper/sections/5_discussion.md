@@ -28,7 +28,7 @@ in NuGeMi-KG are therefore not supported. The Monarch Initiative knowledge
 graph (Putman et al. 2024) provides extensive disease–gene–phenotype
 integration across species and shares NuGeMi-KG's Biolink alignment, but
 similarly lacks both nutritional and microbial layers. Microbe-centric
-resources such as KGMicrobe (Joachimiak et al. 2024) capture microbe–disease
+resources such as KGMicrobe captures microbe–disease
 associations without GWAS-level genetic evidence, while food-chemistry
 resources such as FooDB and the Virtual Metabolic Human (VMH) catalogue
 food composition without linking it to host genetic variation.

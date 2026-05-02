@@ -98,13 +98,11 @@ def main():
 
 We thank the curators and developers of the GWAS Catalog (NHGRI–EBI), USDA
 FoodData Central, gutMGene v2.0, the Biolink Model, and the BioCypher
-framework. We thank [Supervisor Name] for guidance during this work and
-[Reviewer / Colleague] for reading an earlier version of this manuscript.
-[Funding statement, if applicable.]
+framework.
 
 ## Author contributions
 
-**[Author]**: conceptualisation, data curation, software, formal analysis,
+**[Sharath Thoniyot]**: conceptualisation, data curation, software, formal analysis,
 visualisation, writing — original draft, writing — review and editing.
 [Add additional contributors with CRediT roles as applicable.]
 
