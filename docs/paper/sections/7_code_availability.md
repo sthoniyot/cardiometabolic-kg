@@ -1,4 +1,4 @@
-## 7 Code Availability
+## 8 Code Availability
 
 All source code, build scripts, schema configuration, competency-query
 files, and audit data are released under CC-BY-4.0 at

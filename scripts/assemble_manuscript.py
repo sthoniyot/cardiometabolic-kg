@@ -54,16 +54,16 @@ FRONT_MATTER = """\
 
 # (label_for_log, file_under_sections_dir, optional_extra_inserted_content)
 SECTIONS = [
-    ("§1 Background & Summary",       "1_background.md",        None),
-    ("§2 Methods",                    "2_methods.md",           None),
-    ("§3 Data Records",               "3_data_records.md",      "table2_artefacts.md"),
-    ("§4 Results",                    "4_results.md",           "table4_audit.md"),
-    ("§5 Discussion",                 "5_discussion.md",        None),
-    ("§6 Conclusion",                 "6_conclusion.md",        None),
-    ("§7 Code Availability",          "7_code_availability.md", None),
-    ("Figure captions",               "figures.md",             None),
+    ("§1 Background & Summary",       "1_background.md",            None),
+    ("§2 Literature Review",          "2_literature_review.md",     "table1_literature.md"),
+    ("§3 Methods",                    "2_methods.md",               None),
+    ("§4 Data Records",               "3_data_records.md",          "table2_artefacts.md"),
+    ("§5 Results",                    "4_results.md",               "table4_audit.md"),
+    ("§6 Discussion",                 "5_discussion.md",            None),
+    ("§7 Conclusion",                 "6_conclusion.md",            None),
+    ("§8 Code Availability",          "7_code_availability.md",     None),
+    ("Figure captions",               "figures.md",                 None),
 ]
-
 
 def read_required(path: Path) -> str:
     if not path.exists():

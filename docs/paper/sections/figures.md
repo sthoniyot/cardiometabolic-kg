@@ -4,7 +4,7 @@
 
 The full NuGeMi-KG visualised in Neo4j Browser. Nodes are coloured by type
 (SNPs, dark blue; genes, orange; phenotypes, red; microbes, cyan; nutrients,
-green; foods, yellow); edges by relationship type (Methods §2.2). The graph
+green; foods, yellow); edges by relationship type (Methods §3.2). The graph
 contains 55,263 nodes and 85,308 edges. Layout is force-directed and not
 biologically meaningful at this density; the figure is provided to convey
 overall scale and the relative size of each layer. Two structural features
@@ -26,7 +26,7 @@ food-internal (FoodToNutrient), microbiome-internal (MicrobeToNutrient,
 MicrobeToCazyme, MicrobeToGene) and three cross-layer edges
 (NutrientToPhenotype, MicrobeToPhenotype, PhenotypeToPhenotype) that bridge
 the three layers. Each node type is aligned to its parent class in the
-Biolink Model v3.6 (Methods §2.2.2): for instance, `Snp` *is_a*
+Biolink Model v3.6 (Methods §3.2.2): for instance, `Snp` *is_a*
 `sequence_variant`, `Microbe` *is_a* `organism_taxon`, and `Nutrient`
 *is_a* `small_molecule`. All edge types inherit from Biolink's `Association`
 class and carry per-edge provenance properties (PMID, evidence tier, and
@@ -51,4 +51,4 @@ type-2-diabetes drugs and a known mediator of short-chain fatty acid signalling
 from the gut microbiome. The convergence of microbial, genetic, and phenotypic
 evidence on PPARG illustrates the principal hypothesis-generation pattern that
 NuGeMi-KG is designed to support; analogous tri-layer hubs are returned for
-HNF4A, VEGFA, and ANGPTL4 (Methods §4.2).
+HNF4A, VEGFA, and ANGPTL4 (Methods §5.2).

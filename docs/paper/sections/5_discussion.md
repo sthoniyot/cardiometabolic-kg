@@ -1,6 +1,6 @@
-## 5 Discussion
+## 6 Discussion
 
-### 5.1 Principal findings
+### 6.1 Principal findings
 
 NuGeMi-KG is, to our knowledge, the first publicly released knowledge graph
 that integrates host nutrigenetics, gut microbial activity, and food
@@ -18,7 +18,7 @@ of sampled edges have direct primary-literature support, with the remaining
 9% comprising specific, individually tractable curation issues in the
 upstream sources rather than integration errors.
 
-### 5.2 Comparison with existing resources
+### 6.2 Comparison with existing resources
 
 Several established biomedical knowledge graphs cover subsets of NuGeMi-KG's
 content. PrimeKG (Chandak et al. 2023) integrates twenty primary biomedical
@@ -37,7 +37,7 @@ nodes it is two orders of magnitude smaller than PrimeKG — but the
 structural property that a single five-hop query can traverse all three
 biological dimensions simultaneously.
 
-### 5.3 Methodological insights
+### 6.3 Methodological insights
 
 Three implementation choices proved unexpectedly consequential during
 development. First, BioCypher silently drops edge properties that are not
@@ -56,7 +56,7 @@ multiple studies) materially affected query results: pre-deduplication, CQ3
 returned five duplicate *C. minuta* → Acetate rows; post-deduplication, the
 same query returned a clean ranked list of distinct microbe–metabolite pairs.
 
-### 5.4 Limitations
+### 6.4 Limitations
 
 Three limitations bound the resource's current scope. First, NuGeMi-KG is
 restricted to cardiometabolic phenotypes (eleven MONDO classes); extension
@@ -74,7 +74,7 @@ evaluable) is statistically appropriate for an initial release but a
 larger second-annotator audit would tighten the strict-VERIFIED
 confidence interval; this is planned for v1.1.
 
-### 5.5 Implications and future work
+### 6.5 Implications and future work
 
 NuGeMi-KG is designed for hypothesis generation rather than statistical
 inference. A typical user-facing workflow combines a Cypher query that

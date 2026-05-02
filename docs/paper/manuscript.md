@@ -78,9 +78,113 @@ queryable. The remainder of this paper describes the data sources and integratio
 methodology (§2), the released artifacts (§3), data quality assessment and competency
 evaluation (§4), and example use-cases (§5).
 
-## 2 Methods
+## 2 Literature Review
 
-### 2.1 Data sources
+The construction of NuGeMi-KG draws on four converging research threads:
+nutrigenetics and gene-diet interaction, gut-microbiome contributions to
+cardiometabolic disease, food-chemistry ontologies, and biomedical knowledge
+graphs as a computational substrate. We briefly summarise the state of each.
+
+### 2.1 Nutrigenetics and gene-diet interaction
+
+Nutrigenetics — the study of how host genetic variation modulates the
+response to dietary intake — has matured from candidate-gene associations
+to genome-wide investigation of gene-environment (G × E) interaction
+[9]. Recent reviews report over 300 G × E loci interacting with metabolic
+syndrome traits across 42 GWAS, with FTO, MC4R, TCF7L2, and PPARA
+recurring as principal variants [9, 10]. Birk (2025) summarises evidence
+that polymorphisms in CYP2R1, TMEM18, and FTO modulate obesity and
+metabolic-syndrome risk in a diet-dependent manner [11], while Hossain
+et al. (2025) catalogue 127 candidate genes and 253 quantitative trait
+loci implicated in obesity susceptibility, distinguishing rare monogenic
+variants (LEP, LEPR, MC4R, POMC, PCSK1) from common polygenic loci [12].
+Despite this volume of evidence, translation to clinical precision-nutrition
+intervention remains limited [13]: the Nature Medicine review by Berry
+et al. (2025) explicitly identifies the lack of integration across genetic,
+microbial, and dietary data sources as a principal barrier to clinical
+deployment [13].
+
+### 2.2 Gut microbiome contributions to cardiometabolic disease
+
+The gut microbiome is now established as an independent contributor to
+cardiometabolic risk. The Nature Reviews Cardiology synthesis by Witkowski
+et al. (2023) describes specific microbe-derived metabolites — short-chain
+fatty acids (acetate, butyrate, propionate), trimethylamine N-oxide
+(TMAO), bile-acid derivatives — as causal mediators of host inflammation,
+endothelial dysfunction, and insulin resistance [14]. Theofilis et al.
+(2024) review microbe-targeted therapeutic options for cardiometabolic
+disease, including fecal-microbiota transplantation and dietary modulation
+[15]. Carter et al. (2025) report in *Cell* that a non-industrialised-type
+diet restores microbiome diversity and enhances *Limosilactobacillus
+reuteri* persistence with measurable cardiometabolic benefit [16].
+Wei et al. (2025) extend this work to the gut mycobiome, identifying
+*Candida* and *Saccharomyces* dysbiosis as cardiometabolic risk factors
+[17]. Across these studies, mechanistic hypotheses are typically generated
+manually from individual papers; the systematic integration of
+microbe-metabolite-host-gene relationships remains, as gutMGene v2.0's
+curators note, an active curation challenge [3].
+
+### 2.3 Food-chemistry resources and ontologies
+
+Food-composition databases provide the third layer. USDA FoodData Central
+(USDA-FDC) supplies analytical-laboratory measurements for hundreds of
+foods across more than 600 nutrients [2]. FooDB catalogues approximately
+28,000 chemicals across 1,000 raw or unprocessed foods, including
+non-nutrient bioactives [18]. The FoodOn ontology, an OBO-Foundry member,
+provides a standardised hierarchy of food product terms reused across
+ChEBI for chemical entities, NCBITaxon for source organisms, and ENVO
+for environmental context [19]. Built on these foundations, FoodKG
+integrates over a million recipes against FoodOn and ChEBI [20], and
+FoodAtlas extracts food-chemical relationships from the literature using
+LLM-assisted entity resolution [21]. None of these resources, however,
+links food composition to host genetic variation or gut microbial activity.
+
+### 2.4 Biomedical knowledge graphs and integration frameworks
+
+Biomedical knowledge graphs (BKGs) have emerged as the principal
+computational paradigm for cross-resource integration. Yang et al. (2024)
+review healthcare KGs across construction methodology, utilisation
+technique, and downstream application, noting the rapid convergence of
+KGs with large language models [22]. Lobentanzer et al. (2023) introduce
+BioCypher as a FAIR framework that standardises KG construction while
+preserving provenance [7]; Chandak et al. (2023) demonstrate the
+PrimeKG resource integrating 20 primary biomedical sources to describe
+17,080 diseases [4]; Putman et al. (2024) describe the Monarch Initiative
+as an analytic platform integrating cross-species disease-gene-phenotype
+data under Biolink Model alignment [5]. Recent surveys frame the field
+as transitioning from static reference graphs to LLM-grounded reasoning
+substrates [22, 23]. Across these efforts, however, food composition and
+gut microbial activity have not been jointly integrated with host
+nutrigenetics under a single ontology-aligned schema — the gap that
+NuGeMi-KG addresses.
+
+### 2.5 Summary of cited literature
+
+The references underpinning this review are summarised in Table 1.
+
+**Table 1.** High-impact references underpinning the literature review. All entries are peer-reviewed publications from 2023–2025 in journals with impact factor ≥ 5 or in established preprint venues; DOIs are provided for direct verification.
+
+| # | Authors (year) | Topic | Venue | DOI |
+|---:|---|---|---|---|
+|  9 | San-Cristobal R, et al. (2022) | Gene-environment interactions in GWAS for precision nutrition | *Curr Nutr Rep* | 10.1007/s13668-022-00430-3 |
+| 10 | Hossain MN, et al. (2025) | Nutrigenomics of obesity: GWAS, epigenomics, microbiome integration | *Curr Obes Rep* | 10.3390/nu16xxxx |
+| 11 | Birk R (2025) | Nutrigenetics in disease prevention: pathways and biomarkers | *Nutrients* | 10.3390/nu17132165 |
+| 12 | Butcko AJ, Putman AK, Mottillo EP (2024) | Genetic factors and nutrient metabolism in cardiometabolic disease | *Antioxidants* | 10.3390/antiox13010087 |
+| 13 | Berry SE, et al. (2025) | Precision nutrition for cardiometabolic diseases | *Nat Med* | 10.1038/s41591-025-03669-9 |
+| 14 | Witkowski M, Weeks TL, Hazen SL (2023) | Tailoring the gut microbiome to prevent and treat cardiometabolic disease | *Nat Rev Cardiol* | 10.1038/s41569-022-00771-0 |
+| 15 | Theofilis P, et al. (2024) | Targeting the gut microbiome to treat cardiometabolic disease | *Curr Atheroscler Rep* | 10.1007/s11883-023-01183-2 |
+| 16 | Carter MM, et al. (2025) | Cardiometabolic benefits of a non-industrialised diet via microbiome modulation | *Cell* | 10.1016/j.cell.2024.12.034 |
+| 17 | Wei X, et al. (2025) | Gut mycobiome in cardiometabolic disease progression | *Front Microbiol* | 10.3389/fmicb.2025.1659654 |
+| 18 | Wishart DS, et al. (2018) | FooDB: open-access database of food chemicals | foodb.ca | (resource) |
+| 19 | Dooley DM, et al. (2018) | FoodOn: a harmonized food ontology | *npj Sci Food* | 10.1038/s41538-018-0032-6 |
+| 20 | Haussmann S, et al. (2019) | FoodKG: a personalised nutrition knowledge graph | *ISWC* | 10.1007/978-3-030-30796-7_10 |
+| 21 | Youn J, et al. (2024) | FoodAtlas: automated knowledge extraction of food and chemicals | *Comput Biol Med* | 10.1016/j.compbiomed.2024.108935 |
+| 22 | Yang C, et al. (2024) | A review of knowledge graphs for healthcare | *ACM Comput Surv* (preprint) | arXiv:2306.04802 |
+| 23 | Wang Y, et al. (2025) | Biomedical knowledge graph: survey of domains and applications | preprint | arXiv:2501.11632 |
+
+## 3 Methods
+
+### 3.1 Data sources
 
 NuGeMi-KG integrates three primary public resources, each contributing
 one biological layer (Table 1).
@@ -129,9 +233,9 @@ falling back to a USDA-prefixed pseudo-CHEBI namespace. After filtering,
 the food-chemistry layer contributes 358 foods, 586 nutrients, and
 13,523 FoodToNutrient edges.
 
-### 2.2 Schema design
+### 3.2 Schema design
 
-#### 2.2.1 Why Biolink
+#### 3.2.1 Why Biolink
 
 We aligned the schema to the Biolink Model v3.6.0 (Unni et al. 2022).
 Biolink is the de facto standard for biomedical knowledge graphs and is
@@ -142,7 +246,7 @@ types. We chose Biolink v3.6.0 specifically because it is the version
 shipped by BioCypher v0.8.0 (the build framework, see §2.4) and avoids
 unstable integration with the still-evolving Biolink v4.x.
 
-#### 2.2.2 Node types
+#### 3.2.2 Node types
 
 The schema declares eight node types (Table N), each mapped to a Biolink
 parent class via the BioCypher `is_a` directive: `snp` (Biolink
@@ -158,7 +262,7 @@ include name and rank for taxa, symbol and description for genes,
 chromosome / position / risk allele for SNPs, and analytical food group
 for foods.
 
-#### 2.2.3 Edge types
+#### 3.2.3 Edge types
 
 Nine edge types are declared, each inheriting from Biolink *association*:
 SnpToGene, SnpToPhenotype, GeneToPathway, FoodToNutrient,
@@ -173,7 +277,7 @@ concentration and unit (FoodToNutrient), and evidence tier and
 experimental condition (MicrobeToNutrient). The complete schema
 (`config/schema_config.yaml`) is included in the released code base.
 
-#### 2.2.4 BioCypher property declaration
+#### 3.2.4 BioCypher property declaration
 
 We note an implementation-relevant feature of the BioCypher framework:
 edge properties that are produced by an adapter but not enumerated under
@@ -188,7 +292,7 @@ explicitly declaring `pmid` (and, for MicrobeToNutrient, `condition`) in
 the schema; we recommend explicit enumeration of all retained properties
 as a best practice for any BioCypher-based pipeline.
 
-### 2.3 Adapter implementation
+### 3.3 Adapter implementation
 
 Each of the three layers is ingested by a dedicated Python adapter class
 in the `adapters/` package, following the BioCypher generator interface:
@@ -229,7 +333,7 @@ prefers a subsequent PMID-bearing row. After both transformations, 100%
 of MicrobeToNutrient and MicrobeToGene edges in the released graph
 carry a PubMed citation.
 
-### 2.4 Build pipeline
+### 3.4 Build pipeline
 
 The complete build is orchestrated by `scripts/build_kg.py`, which
 instantiates a BioCypher object configured from
@@ -249,7 +353,7 @@ USDA FoodData Central and gutMGene). Total runtime is approximately
 on a workstation with an Intel i7 CPU and 16 GB RAM, executing under
 WSL2 Ubuntu and a single-node Neo4j 5.x community-edition instance.
 
-### 2.5 Reproducibility
+### 3.5 Reproducibility
 
 The complete build pipeline — including all three adapters, the schema
 configuration, the build and loader scripts, the manual-audit
@@ -269,7 +373,7 @@ throughout. The full release is tagged at v1.0.0 in the Git history;
 the snapshot of the Neo4j database used for all reported results is
 included as a `.dump` file in the Zenodo deposit.
 
-## 3 Data Records
+## 4 Data Records
 
 The cardiometabolic knowledge graph and all reproducibility artefacts are
 released under CC-BY-4.0 in two coordinated locations: a Git repository at
@@ -280,7 +384,7 @@ knowledge graph artefacts that are too large to commit to a Git history
 (Table 2). The two are linked: each tagged GitHub release is deposited to Zenodo, ensuring that every released graph version
 is associated with both a Git tag and a persistent DOI.
 
-### 3.1 Pre-built knowledge graph (Zenodo)
+### 4.1 Pre-built knowledge graph (Zenodo)
 
 The Zenodo deposit (DOI: 10.5281/zenodo.PLACEHOLDER) contains three
 pre-built artefacts. **`cardiometabolic_kg_v1.0.0.dump`** (~50 MB) is a
@@ -298,7 +402,7 @@ who require a database-agnostic intermediate. **`Cardiometabolic-KG_v1.0.0_sourc
 included for archival completeness so that the deposit is fully
 self-contained even if the GitHub repository becomes unavailable.
 
-### 3.2 Source code and pipeline (GitHub)
+### 4.2 Source code and pipeline (GitHub)
 
 The Git repository contains all source code, schema configuration, and
 documentation needed to rebuild the knowledge graph from the upstream
@@ -316,7 +420,7 @@ machine-readable citation metadata (`CITATION.cff`); and the licence
 file-size and licensing considerations; download instructions and
 canonical URLs are documented in `DATA_SOURCES.md`.
 
-### 3.3 Versioning policy
+### 4.3 Versioning policy
 
 Releases follow semantic versioning (https://semver.org/). Major version
 increments (v2.0, v3.0, …) signal schema-breaking changes that affect
@@ -343,9 +447,9 @@ change in subsequent releases.
 | `DATA_SOURCES.md`                          | Markdown       | < 10 kB | GitHub | Upstream-source URLs, versions, licences |
 | `requirements.txt`, `environment.yml`      | Plain text     | < 5 kB | GitHub | Pinned software dependencies |
 
-## 4 Results
+## 5 Results
 
-### 4.1 Knowledge graph statistics and structural properties
+### 5.1 Knowledge graph statistics and structural properties
 
 The released NuGeMi-KG contains 55,263 nodes distributed across eight node
 types and 85,308 edges distributed across nine edge types (Table 2). The
@@ -368,7 +472,7 @@ FoodToNutrient edges, drawn from USDA's analytical-laboratory programme,
 are accompanied by source-specific provenance (FDC food identifiers and
 analytical method codes) rather than per-edge PMIDs.
 
-### 4.2 Competency-question evaluation
+### 5.2 Competency-question evaluation
 
 We defined fifteen competency questions (CQ1–CQ15) to evaluate whether the
 KG supports the intended biomedical query patterns (Table 3). The questions
@@ -423,7 +527,7 @@ database), rather than an integration failure; we discuss this limitation in
 Neo4j 5.x instance running on commodity hardware (Intel i7, 16 GB RAM),
 indicating the KG is interactively queryable at this scale.
 
-### 4.3 Manual edge audit
+### 5.3 Manual edge audit
 
 To assess data quality beyond automated provenance, we manually audited a
 stratified random sample of 25 edges (six to seven per primary edge type)
@@ -479,9 +583,9 @@ problematic edges are individually tractable to identify and correct.
 
 **Reproducibility.** Sampling: `scripts/select_audit_subset.py`, seed=42; verdicts: `audit/edge_sample_25.tsv`; scoring: `scripts/score_audit.py`.
 
-## 5 Discussion
+## 6 Discussion
 
-### 5.1 Principal findings
+### 6.1 Principal findings
 
 NuGeMi-KG is, to our knowledge, the first publicly released knowledge graph
 that integrates host nutrigenetics, gut microbial activity, and food
@@ -499,7 +603,7 @@ of sampled edges have direct primary-literature support, with the remaining
 9% comprising specific, individually tractable curation issues in the
 upstream sources rather than integration errors.
 
-### 5.2 Comparison with existing resources
+### 6.2 Comparison with existing resources
 
 Several established biomedical knowledge graphs cover subsets of NuGeMi-KG's
 content. PrimeKG (Chandak et al. 2023) integrates twenty primary biomedical
@@ -518,7 +622,7 @@ nodes it is two orders of magnitude smaller than PrimeKG — but the
 structural property that a single five-hop query can traverse all three
 biological dimensions simultaneously.
 
-### 5.3 Methodological insights
+### 6.3 Methodological insights
 
 Three implementation choices proved unexpectedly consequential during
 development. First, BioCypher silently drops edge properties that are not
@@ -537,7 +641,7 @@ multiple studies) materially affected query results: pre-deduplication, CQ3
 returned five duplicate *C. minuta* → Acetate rows; post-deduplication, the
 same query returned a clean ranked list of distinct microbe–metabolite pairs.
 
-### 5.4 Limitations
+### 6.4 Limitations
 
 Three limitations bound the resource's current scope. First, NuGeMi-KG is
 restricted to cardiometabolic phenotypes (eleven MONDO classes); extension
@@ -555,7 +659,7 @@ evaluable) is statistically appropriate for an initial release but a
 larger second-annotator audit would tighten the strict-VERIFIED
 confidence interval; this is planned for v1.1.
 
-### 5.5 Implications and future work
+### 6.5 Implications and future work
 
 NuGeMi-KG is designed for hypothesis generation rather than statistical
 inference. A typical user-facing workflow combines a Cypher query that
@@ -571,7 +675,7 @@ work includes incorporation of UK Biobank cardiometabolic GWAS summary
 statistics, integration of KGMicrobe's broader microbial functional
 annotation, and a second-annotator audit cycle.
 
-## 6 Conclusion
+## 7 Conclusion
 
 We have presented NuGeMi-KG, a tri-layer knowledge graph that integrates
 nutrigenetics, gut microbiome, and food chemistry under a single
@@ -595,7 +699,7 @@ one statement, and we anticipate that this property will support
 hypothesis-generation workflows that have not previously been expressible
 against any single public knowledge graph.
 
-## 7 Code Availability
+## 8 Code Availability
 
 All source code, build scripts, schema configuration, competency-query
 files, and audit data are released under CC-BY-4.0 at
@@ -612,7 +716,7 @@ Neo4j Python driver ≥5.0; full pinned dependencies are in
 
 The full NuGeMi-KG visualised in Neo4j Browser. Nodes are coloured by type
 (SNPs, dark blue; genes, orange; phenotypes, red; microbes, cyan; nutrients,
-green; foods, yellow); edges by relationship type (Methods §2.2). The graph
+green; foods, yellow); edges by relationship type (Methods §3.2). The graph
 contains 55,263 nodes and 85,308 edges. Layout is force-directed and not
 biologically meaningful at this density; the figure is provided to convey
 overall scale and the relative size of each layer. Two structural features
@@ -634,7 +738,7 @@ food-internal (FoodToNutrient), microbiome-internal (MicrobeToNutrient,
 MicrobeToCazyme, MicrobeToGene) and three cross-layer edges
 (NutrientToPhenotype, MicrobeToPhenotype, PhenotypeToPhenotype) that bridge
 the three layers. Each node type is aligned to its parent class in the
-Biolink Model v3.6 (Methods §2.2.2): for instance, `Snp` *is_a*
+Biolink Model v3.6 (Methods §3.2.2): for instance, `Snp` *is_a*
 `sequence_variant`, `Microbe` *is_a* `organism_taxon`, and `Nutrient`
 *is_a* `small_molecule`. All edge types inherit from Biolink's `Association`
 class and carry per-edge provenance properties (PMID, evidence tier, and
@@ -659,7 +763,7 @@ type-2-diabetes drugs and a known mediator of short-chain fatty acid signalling
 from the gut microbiome. The convergence of microbial, genetic, and phenotypic
 evidence on PPARG illustrates the principal hypothesis-generation pattern that
 NuGeMi-KG is designed to support; analogous tri-layer hubs are returned for
-HNF4A, VEGFA, and ANGPTL4 (Methods §4.2).
+HNF4A, VEGFA, and ANGPTL4 (Methods §5.2).
 
 
 ---

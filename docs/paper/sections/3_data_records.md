@@ -1,4 +1,4 @@
-## 3 Data Records
+## 4 Data Records
 
 The cardiometabolic knowledge graph and all reproducibility artefacts are
 released under CC-BY-4.0 in two coordinated locations: a Git repository at
@@ -9,7 +9,7 @@ knowledge graph artefacts that are too large to commit to a Git history
 (Table 2). The two are linked: each tagged GitHub release is deposited to Zenodo, ensuring that every released graph version
 is associated with both a Git tag and a persistent DOI.
 
-### 3.1 Pre-built knowledge graph (Zenodo)
+### 4.1 Pre-built knowledge graph (Zenodo)
 
 The Zenodo deposit (DOI: 10.5281/zenodo.PLACEHOLDER) contains three
 pre-built artefacts. **`cardiometabolic_kg_v1.0.0.dump`** (~50 MB) is a
@@ -27,7 +27,7 @@ who require a database-agnostic intermediate. **`Cardiometabolic-KG_v1.0.0_sourc
 included for archival completeness so that the deposit is fully
 self-contained even if the GitHub repository becomes unavailable.
 
-### 3.2 Source code and pipeline (GitHub)
+### 4.2 Source code and pipeline (GitHub)
 
 The Git repository contains all source code, schema configuration, and
 documentation needed to rebuild the knowledge graph from the upstream
@@ -45,7 +45,7 @@ machine-readable citation metadata (`CITATION.cff`); and the licence
 file-size and licensing considerations; download instructions and
 canonical URLs are documented in `DATA_SOURCES.md`.
 
-### 3.3 Versioning policy
+### 4.3 Versioning policy
 
 Releases follow semantic versioning (https://semver.org/). Major version
 increments (v2.0, v3.0, …) signal schema-breaking changes that affect

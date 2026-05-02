@@ -1,6 +1,6 @@
-## 4 Results
+## 5 Results
 
-### 4.1 Knowledge graph statistics and structural properties
+### 5.1 Knowledge graph statistics and structural properties
 
 The released NuGeMi-KG contains 55,263 nodes distributed across eight node
 types and 85,308 edges distributed across nine edge types (Table 2). The
@@ -23,7 +23,7 @@ FoodToNutrient edges, drawn from USDA's analytical-laboratory programme,
 are accompanied by source-specific provenance (FDC food identifiers and
 analytical method codes) rather than per-edge PMIDs.
 
-### 4.2 Competency-question evaluation
+### 5.2 Competency-question evaluation
 
 We defined fifteen competency questions (CQ1–CQ15) to evaluate whether the
 KG supports the intended biomedical query patterns (Table 3). The questions
@@ -78,7 +78,7 @@ database), rather than an integration failure; we discuss this limitation in
 Neo4j 5.x instance running on commodity hardware (Intel i7, 16 GB RAM),
 indicating the KG is interactively queryable at this scale.
 
-### 4.3 Manual edge audit
+### 5.3 Manual edge audit
 
 To assess data quality beyond automated provenance, we manually audited a
 stratified random sample of 25 edges (six to seven per primary edge type)

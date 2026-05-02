@@ -1,4 +1,4 @@
-## 6 Conclusion
+## 7 Conclusion
 
 We have presented NuGeMi-KG, a tri-layer knowledge graph that integrates
 nutrigenetics, gut microbiome, and food chemistry under a single

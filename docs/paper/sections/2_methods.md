@@ -1,6 +1,6 @@
-## 2 Methods
+## 3 Methods
 
-### 2.1 Data sources
+### 3.1 Data sources
 
 NuGeMi-KG integrates three primary public resources, each contributing
 one biological layer (Table 1).
@@ -49,9 +49,9 @@ falling back to a USDA-prefixed pseudo-CHEBI namespace. After filtering,
 the food-chemistry layer contributes 358 foods, 586 nutrients, and
 13,523 FoodToNutrient edges.
 
-### 2.2 Schema design
+### 3.2 Schema design
 
-#### 2.2.1 Why Biolink
+#### 3.2.1 Why Biolink
 
 We aligned the schema to the Biolink Model v3.6.0 (Unni et al. 2022).
 Biolink is the de facto standard for biomedical knowledge graphs and is
@@ -62,7 +62,7 @@ types. We chose Biolink v3.6.0 specifically because it is the version
 shipped by BioCypher v0.8.0 (the build framework, see §2.4) and avoids
 unstable integration with the still-evolving Biolink v4.x.
 
-#### 2.2.2 Node types
+#### 3.2.2 Node types
 
 The schema declares eight node types (Table N), each mapped to a Biolink
 parent class via the BioCypher `is_a` directive: `snp` (Biolink
@@ -78,7 +78,7 @@ include name and rank for taxa, symbol and description for genes,
 chromosome / position / risk allele for SNPs, and analytical food group
 for foods.
 
-#### 2.2.3 Edge types
+#### 3.2.3 Edge types
 
 Nine edge types are declared, each inheriting from Biolink *association*:
 SnpToGene, SnpToPhenotype, GeneToPathway, FoodToNutrient,
@@ -93,7 +93,7 @@ concentration and unit (FoodToNutrient), and evidence tier and
 experimental condition (MicrobeToNutrient). The complete schema
 (`config/schema_config.yaml`) is included in the released code base.
 
-#### 2.2.4 BioCypher property declaration
+#### 3.2.4 BioCypher property declaration
 
 We note an implementation-relevant feature of the BioCypher framework:
 edge properties that are produced by an adapter but not enumerated under
@@ -108,7 +108,7 @@ explicitly declaring `pmid` (and, for MicrobeToNutrient, `condition`) in
 the schema; we recommend explicit enumeration of all retained properties
 as a best practice for any BioCypher-based pipeline.
 
-### 2.3 Adapter implementation
+### 3.3 Adapter implementation
 
 Each of the three layers is ingested by a dedicated Python adapter class
 in the `adapters/` package, following the BioCypher generator interface:
@@ -149,7 +149,7 @@ prefers a subsequent PMID-bearing row. After both transformations, 100%
 of MicrobeToNutrient and MicrobeToGene edges in the released graph
 carry a PubMed citation.
 
-### 2.4 Build pipeline
+### 3.4 Build pipeline
 
 The complete build is orchestrated by `scripts/build_kg.py`, which
 instantiates a BioCypher object configured from
@@ -169,7 +169,7 @@ USDA FoodData Central and gutMGene). Total runtime is approximately
 on a workstation with an Intel i7 CPU and 16 GB RAM, executing under
 WSL2 Ubuntu and a single-node Neo4j 5.x community-edition instance.
 
-### 2.5 Reproducibility
+### 3.5 Reproducibility
 
 The complete build pipeline — including all three adapters, the schema
 configuration, the build and loader scripts, the manual-audit
