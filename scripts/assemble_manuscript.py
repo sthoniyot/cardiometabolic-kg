@@ -144,7 +144,7 @@ URLs and DOIs.
         try:
             subprocess.run(
                 ["pandoc", str(OUT_MD), "-o", str(OUT_DOCX),
-                 "--standalone", "--toc", "--toc-depth=2"],
+                 "--standalone"],
                 check=True,
             )
             size_kb = OUT_DOCX.stat().st_size // 1024
