@@ -9,7 +9,7 @@ one biological layer (Table 1).
 release of 21 April 2026 (the "all associations with added ontology
 annotations" TSV bulk download). The full release contains approximately
 1.1 million SNP–trait association records from over 7,000 publications. We
-filtered to cardiometabolic traits using a curated keyword list of fifteen
+filtered to cardiometabolic traits using a curated keyword list of twenty-four
 substring patterns (e.g. *type 2 diabetes*, *body mass index*, *LDL
 cholesterol*, *coronary artery disease*, *blood pressure*) and mapped each
 matched trait to one of eleven canonical MONDO disease classes (Table 1
