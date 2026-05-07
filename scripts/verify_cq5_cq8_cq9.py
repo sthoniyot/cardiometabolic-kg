@@ -97,9 +97,9 @@ def main():
                OR toLower(n.name) CONTAINS 'vitamin c'
             RETURN n.name AS nutrient_name,
                    f.name AS food,
-                   r.amount AS amount,
+                   r.concentration AS concentration,
                    r.unit AS unit
-            ORDER BY r.amount DESC
+            ORDER BY r.concentration DESC
             LIMIT 10
         """, label="CQ5.B top foods by vitamin C")
 
@@ -122,7 +122,7 @@ def main():
         section("CQ8.B  Top 15 (nutrient, food) pairs joined across layers")
         run(s, """
             MATCH (m:Microbe)-[:MicrobeToNutrient]->(n:Nutrient)<-[r:FoodToNutrient]-(f:Food)
-            WITH n, f, r.amount AS food_amount, count(DISTINCT m) AS n_microbes
+            WITH n, f, r.concentration AS food_amount, count(DISTINCT m) AS n_microbes
             WHERE n_microbes > 0
             RETURN n.name AS nutrient,
                    n_microbes AS modulating_microbes,
